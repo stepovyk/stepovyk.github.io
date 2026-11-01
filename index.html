@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ігри українською – Stepovyk</title>
+<meta name="description" content="Безкоштовні повні українські локалізації ігор: Call of Duty: World at War, Mount & Blade II: Bannerlord. Далі – уся серія Call of Duty і дубляж Bannerlord.">
+<link rel="canonical" href="https://stepovyk.github.io/">
+<meta name="theme-color" content="#0b0f17">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:site_name" content="Ігри українською">
+<meta property="og:title" content="Ігри українською – Stepovyk">
+<meta property="og:description" content="Безкоштовні повні українські локалізації: Call of Duty: World at War і Mount & Blade II: Bannerlord. Далі – уся серія Call of Duty.">
+<meta property="og:url" content="https://stepovyk.github.io/">
+<meta property="og:image" content="https://stepovyk.github.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@600;700&family=Fira+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0f17;--surface:#131a26;--surface-2:#1a2332;--line:#243044;
+  --text:#eef2f8;--muted:#a3aec0;--blue:#0057b8;--blue-hi:#2f7ee0;--yellow:#ffd500;
+  --r:20px;--gut:16px;
+  --head:"Fira Sans Condensed",system-ui,sans-serif;--body:"Fira Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(900px 420px at 12% 0,rgb(0 87 184 / .26),transparent 70%),radial-gradient(700px 360px at 92% 0,rgb(255 213 0 / .08),transparent 70%) no-repeat,var(--bg);color:var(--text);font:400 17px/1.55 var(--body);overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{width:min(1120px,100% - 2*var(--gut));margin-inline:auto}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:10px}
+
+/* шапка */
+header{position:sticky;top:0;z-index:10;background:rgb(11 15 23 / .82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgb(255 255 255 / .06)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font:600 22px/1 var(--head)}
+.brand img{width:36px;height:36px;border-radius:10px}
+.nav{display:flex;gap:6px;align-items:center}
+.nav a{text-decoration:none;color:var(--muted);font:500 15px/1 var(--body);padding:14px 12px;border-radius:999px;transition:color .2s,background .2s}
+.nav a:hover{color:var(--text);background:var(--surface)}
+.nav .btn,.nav .btn:hover{color:#fff;background:var(--blue)}
+.nav .btn:hover{background:var(--blue-hi)}
+@media (max-width:640px){.nav .opt{display:none}}
+
+/* кнопки */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;font:600 18px/1 var(--head);letter-spacing:.01em;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .2s,box-shadow .2s;white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-y{background:var(--yellow);color:#14161a}
+.btn-y:hover{box-shadow:0 8px 28px rgb(255 213 0 / .28)}
+.btn-b{background:var(--blue);color:#fff}
+.btn-b:hover{background:var(--blue-hi)}
+.btn-g{background:var(--surface-2);color:var(--text);box-shadow:inset 0 0 0 1px var(--line)}
+.btn-g:hover{background:#223047}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+
+/* перший екран */
+.hero{padding:clamp(56px,10vw,112px) 0 clamp(16px,3vw,32px)}
+h1{font:700 clamp(46px,12vw,128px)/.92 var(--head);margin:0 0 24px;text-transform:uppercase;letter-spacing:-.01em}
+h1 span{display:block;color:var(--yellow)}
+.flag{display:flex;width:80px;height:8px;border-radius:4px;overflow:hidden;margin:0 0 24px}
+.flag::before,.flag::after{content:"";flex:1}
+.flag::before{background:var(--blue)}.flag::after{background:var(--yellow)}
+.lead{font-size:clamp(19px,2.4vw,23px);color:#c9d1de;max-width:40ch;text-wrap:pretty;margin:0 0 32px}
+
+/* розділи */
+section{padding:clamp(40px,7vw,72px) 0}
+h2{font:700 clamp(36px,6vw,56px)/1 var(--head);margin:0 0 12px;text-transform:uppercase}
+.sub{color:var(--muted);margin:0 0 32px;font-size:18px;max-width:60ch;text-wrap:pretty}
+
+/* ігри */
+.games{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px}
+.game{background:var(--surface);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;box-shadow:inset 0 0 0 1px var(--line);transition:transform .25s,box-shadow .25s}
+.game:hover{transform:translateY(-3px);box-shadow:inset 0 0 0 1px #34445e,0 20px 50px rgb(0 0 0 / .35)}
+.shot{position:relative;aspect-ratio:16/9;overflow:hidden;background:#05070b}
+.shot img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.game:hover .shot img{transform:scale(1.03)}
+.badge{position:absolute;right:14px;top:14px;background:var(--yellow);color:#14161a;font:700 14px/1 var(--head);text-transform:uppercase;letter-spacing:.04em;padding:8px 12px;border-radius:999px}
+.body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:14px;flex:1}
+h3{font:700 clamp(26px,3.4vw,32px)/1.05 var(--head);margin:0}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.facts li{background:var(--surface-2);color:#d6dce7;font-size:15px;padding:7px 12px;border-radius:999px}
+.game p,.card p{margin:0;color:var(--muted);text-wrap:pretty}
+.game .btns{margin-top:auto;padding-top:6px}
+.game .btn-g{flex:1}
+@media (max-width:480px){.game .btn-y{flex:1 1 100%}}
+@media (min-width:700px) and (max-width:1000px){.game .btn-y{flex:1 1 100%}}
+
+/* у роботі */
+.next{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px}
+.card{border-radius:var(--r);padding:26px;background:linear-gradient(160deg,var(--surface-2),var(--surface));box-shadow:inset 0 0 0 1px var(--line);display:flex;flex-direction:column;gap:14px}
+.tag{align-self:flex-start;font:600 14px/1 var(--head);text-transform:uppercase;letter-spacing:.05em;color:var(--yellow);display:flex;align-items:center;gap:8px}
+.tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 0 rgb(255 213 0 / .6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgb(255 213 0 / 0)}100%{box-shadow:0 0 0 0 rgb(255 213 0 / 0)}}
+.card p{margin:0;color:var(--muted)}
+.card .btns{margin-top:auto}
+
+/* підтримка */
+.support{border-radius:28px;padding:clamp(28px,5vw,56px);background:linear-gradient(135deg,#0a3f84,var(--blue) 60%,#0b4a9a)}
+.support h2{color:#fff}
+.support .sub{color:#d7e5ff}
+.support .note{margin:22px 0 0;color:#d7e5ff;font-size:16px}
+.support .note a{color:#fff}
+
+footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
+.foot{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:28px}
+.foot nav{display:flex;flex-wrap:wrap;gap:0 8px;margin:0 -10px}
+.foot nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 10px}
+.foot a{text-decoration:none}.foot a:hover{color:var(--text)}
+.legal{margin:16px 0 0;font-size:14px;color:#7d889b}
+
+/* поява */
+.rise{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rise.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rise{opacity:1;transform:none}}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--text);color:var(--bg);font:500 16px/1 var(--body);padding:14px 20px;border-radius:999px;opacity:0;pointer-events:none;transition:.25s;z-index:20}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Ігри українською – на початок"><img src="assets/icon.svg" alt="" width="36" height="36">Stepovyk</a>
+    <nav class="nav" aria-label="Розділи">
+      <a class="opt" href="#games">Переклади</a>
+      <a class="opt" href="#next">У роботі</a>
+      <a class="opt" href="#support">Підтримати</a>
+      <a class="btn btn-b" href="https://t.me/stepovyk_ua" style="min-height:44px;padding:0 18px;font-size:16px">Telegram</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <h1>Ігри<span>українською</span></h1>
+    <div class="flag" aria-hidden="true"></div>
+    <p class="lead">Повні українські локалізації ігор. Безкоштовно, з встановленням за хвилину.</p>
+    <div class="btns">
+      <a class="btn btn-y" href="#games">Обрати гру</a>
+      <button class="btn btn-g" type="button" data-share>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v14"/></svg>
+        Поділитися
+      </button>
+    </div>
+  </div>
+
+  <section id="games">
+    <div class="wrap">
+      <h2 class="rise">Уже українською</h2>
+      <p class="sub rise">Перекладено весь текст гри. Англійську можна повернути будь-коли.</p>
+      <div class="games">
+        <article class="game rise">
+          <div class="shot">
+            <img src="assets/waw-640.jpg" srcset="assets/waw-640.jpg 640w, assets/waw.jpg 1280w" sizes="(max-width:980px) 100vw, 560px" alt="Українські субтитри в кампанії Call of Duty: World at War" width="1280" height="720" loading="lazy">
+            <span class="badge">Готово</span>
+          </div>
+          <div class="body">
+            <h3>Call of Duty: World at War</h3>
+            <ul class="facts">
+              <li>Кампанія</li><li>Зомбі</li><li>Мультиплеєр</li><li>Нові шрифти</li>
+            </ul>
+            <p>Понад 9 600 рядків з живою редактурою. Інсталятор ставить і прибирає переклад в один клік.</p>
+            <div class="btns">
+              <a class="btn btn-y" href="https://github.com/stepovyk/cod-waw-ukrainian/releases/latest">Завантажити</a>
+              <a class="btn btn-g" href="https://www.nexusmods.com/callofdutyworldatwar/mods/138">Nexus Mods</a>
+              <a class="btn btn-g" href="https://github.com/stepovyk/cod-waw-ukrainian">GitHub</a>
+            </div>
+          </div>
+        </article>
+        <article class="game rise">
+          <div class="shot">
+            <img src="assets/bannerlord-640.jpg" srcset="assets/bannerlord-640.jpg 640w, assets/bannerlord.jpg 1280w" sizes="(max-width:980px) 100vw, 560px" alt="Головне меню Mount &amp; Blade II: Bannerlord українською" width="1280" height="720" loading="lazy">
+            <span class="badge">Готово</span>
+          </div>
+          <div class="body">
+            <h3>Mount &amp; Blade II: Bannerlord</h3>
+            <ul class="facts">
+              <li>Кампанія</li><li>Мережева гра</li><li>Відмінки й рід</li><li>Субтитри</li>
+            </ul>
+            <p>20 965 рядків. Назви й імена відмінюються самі: «захопили Тисмил», «у Вландії».</p>
+            <div class="btns">
+              <a class="btn btn-y" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3823641704">Steam Workshop</a>
+              <a class="btn btn-g" href="https://www.nexusmods.com/mountandblade2bannerlord/mods/14111">Nexus Mods</a>
+              <a class="btn btn-g" href="https://github.com/stepovyk/bannerlord-ukrainian">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="next">
+    <div class="wrap">
+      <h2 class="rise">Далі в роботі</h2>
+      <p class="sub rise">Переклади виходять по черзі. Новини й голосування – у Telegram.</p>
+      <div class="next">
+        <div class="card rise">
+          <span class="tag">Голосування</span>
+          <h3>Уся серія Call of Duty</h3>
+          <p>World at War – лише початок. Яку частину перекладаю наступною, вирішуєте ви.</p>
+          <div class="btns"><a class="btn btn-y" href="https://t.me/stepovyk_ua">Проголосувати</a></div>
+        </div>
+        <div class="card rise">
+          <span class="tag">У роботі</span>
+          <h3>Дубляж Bannerlord</h3>
+          <p>Повна українська озвучка власною моделлю «Степ»: свій голос кожному персонажу, чиста вимова й правильні наголоси.</p>
+          <div class="btns"><a class="btn btn-g" href="https://t.me/stepovyk_ua">Стежити в Telegram</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="support">
+    <div class="wrap">
+      <div class="support rise">
+        <h2>Підтримати</h2>
+        <p class="sub">Усі переклади безкоштовні й такими лишаться. Кожна гривня наближає наступну гру.</p>
+        <div class="btns">
+          <a class="btn btn-y" href="https://send.monobank.ua/jar/8aeC9dGFrn">Monobank</a>
+          <a class="btn btn-g" href="https://www.privat24.ua/send/kkyqm" style="background:#fff;color:#0b2a55;box-shadow:none">Приват24</a>
+        </div>
+        <p class="note">Без грошей теж можна: поділіться сайтом або поставте Endorse на Nexus.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <span>Stepovyk</span>
+      <nav aria-label="Посилання">
+        <a href="https://t.me/stepovyk_ua">Telegram</a>
+        <a href="https://github.com/stepovyk">GitHub</a>
+        <a href="mailto:xherfix.010@gmail.com">xherfix.010@gmail.com</a>
+      </nav>
+    </div>
+    <p class="legal">Неофіційні фанатські переклади. Ігри й торговельні марки належать їхнім власникам.</p>
+  </div>
+</footer>
+<div class="toast" role="status" aria-live="polite"></div>
+<script>
+(() => {
+  const io = 'IntersectionObserver' in window && new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.rise').forEach(el => io ? io.observe(el) : el.classList.add('in'));
+
+  const toast = document.querySelector('.toast');
+  const say = t => { toast.textContent = t; toast.classList.add('on'); setTimeout(() => toast.classList.remove('on'), 2200); };
+  document.querySelector('[data-share]').addEventListener('click', async () => {
+    const data = { title: 'Ігри українською', text: 'Безкоштовні українські локалізації ігор', url: 'https://stepovyk.github.io/' };
+    if (navigator.share) { try { await navigator.share(data); } catch (_) {} return; }
+    try { await navigator.clipboard.writeText(data.url); say('Посилання скопійовано'); }
+    catch (_) { say('stepovyk.github.io'); }
+  });
+})();
+</script>
+</body>
+</html>
