@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ігри українською – Stepovyk</title>
-<meta name="description" content="Безкоштовні повні українські локалізації ігор: Call of Duty: World at War, Mount & Blade II: Bannerlord, RimWorld. Далі – уся серія Call of Duty і дубляж Bannerlord.">
+<title>Ігри українською – українізатори від Stepovyk</title>
+<meta name="description" content="Безкоштовні українізатори ігор від Stepovyk: Call of Duty: World at War, Mount & Blade II: Bannerlord, RimWorld. Повний переклад, нові шрифти, встановлення за хвилину. Далі – уся серія Call of Duty і дубляж Bannerlord.">
 <link rel="canonical" href="https://stepovyk.github.io/">
 <meta name="theme-color" content="#0b0f17">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="uk_UA">
 <meta property="og:site_name" content="Ігри українською">
-<meta property="og:title" content="Ігри українською – Stepovyk">
+<meta property="og:title" content="Ігри українською – українізатори від Stepovyk">
 <meta property="og:description" content="Безкоштовні повні українські локалізації: Call of Duty: World at War і Mount & Blade II: Bannerlord, RimWorld. Далі – уся серія Call of Duty.">
 <meta property="og:url" content="https://stepovyk.github.io/">
 <meta property="og:image" content="https://stepovyk.github.io/assets/og.png">
@@ -19,7 +19,10 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.png" type="image/png" sizes="64x64">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Ігри українською","url":"https://stepovyk.github.io/","inLanguage":"uk"},{"@type":"Person","name":"Stepovyk","url":"https://stepovyk.github.io/","image":"https://stepovyk.github.io/assets/avatar-512.png","sameAs":["https://t.me/stepovyk_ua","https://github.com/stepovyk","https://www.nexusmods.com/users/174402135"]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@600;700&family=Fira+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -63,9 +66,15 @@ header{position:sticky;top:0;z-index:10;background:rgb(11 15 23 / .82);backdrop-
 .btns{display:flex;flex-wrap:wrap;gap:10px}
 
 /* перший екран */
-.hero{padding:clamp(56px,10vw,112px) 0 clamp(16px,3vw,32px)}
-h1{font:700 clamp(46px,12vw,128px)/.92 var(--head);margin:0 0 24px;text-transform:uppercase;letter-spacing:-.01em}
+.hero{padding:clamp(48px,8vw,104px) 0 clamp(16px,3vw,32px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,56px);align-items:center}
+@media (max-width:900px){.hero{grid-template-columns:1fr}}
+.collage{display:grid;grid-template-columns:1.35fr 1fr;grid-template-rows:1fr 1fr;gap:12px;aspect-ratio:16/11}
+.collage img{width:100%;height:100%;object-fit:cover;border-radius:16px;box-shadow:0 0 0 1px var(--line),0 18px 40px rgb(0 0 0 / .4)}
+.collage img:first-child{grid-row:1 / span 2}
+.hero-text{min-width:0}
+h1{font:700 clamp(46px,12vw,112px)/.92 var(--head);margin:0 0 24px;text-transform:uppercase;letter-spacing:-.01em}
 h1 span{display:block;color:var(--yellow)}
+@media (min-width:901px){h1{font-size:clamp(60px,7.2vw,84px)}}
 .flag{display:flex;width:80px;height:8px;border-radius:4px;overflow:hidden;margin:0 0 24px}
 .flag::before,.flag::after{content:"";flex:1}
 .flag::before{background:var(--blue)}.flag::after{background:var(--yellow)}
@@ -101,6 +110,13 @@ h3{font:700 clamp(26px,3.4vw,32px)/1.05 var(--head);margin:0}
 @keyframes pulse{70%{box-shadow:0 0 0 8px rgb(255 213 0 / 0)}100%{box-shadow:0 0 0 0 rgb(255 213 0 / 0)}}
 .card p{margin:0;color:var(--muted)}
 .card .btns{margin-top:auto}
+
+/* Steppe */
+#steppe{padding-top:0}
+.steppe{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 32px;padding:clamp(24px,4vw,40px);border-radius:var(--r);background:linear-gradient(160deg,var(--surface-2),var(--surface));box-shadow:inset 0 0 0 1px var(--line)}
+.steppe>div{flex:1 1 420px;min-width:0}
+.steppe img{height:clamp(44px,6vw,64px);width:auto;margin:0 0 16px}
+.steppe p{margin:0;color:var(--muted);max-width:56ch;text-wrap:pretty}
 
 /* підтримка */
 .support{border-radius:28px;padding:clamp(28px,5vw,56px);background:linear-gradient(135deg,#0a3f84,var(--blue) 60%,#0b4a9a)}
@@ -139,6 +155,7 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
 
 <main id="top">
   <div class="wrap hero">
+    <div class="hero-text">
     <h1>Ігри<span>українською</span></h1>
     <div class="flag" aria-hidden="true"></div>
     <p class="lead">Повні українські локалізації ігор. Безкоштовно, з встановленням за хвилину.</p>
@@ -148,6 +165,12 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v14"/></svg>
         Поділитися
       </button>
+    </div>
+    </div>
+    <div class="collage" aria-hidden="true">
+      <img src="assets/waw-640.jpg" srcset="assets/waw-640.jpg 640w, assets/waw.jpg 1280w" sizes="(max-width:900px) 60vw, 330px" alt="" width="640" height="360">
+      <img src="assets/bannerlord-640.jpg" alt="" width="640" height="360">
+      <img src="assets/rimworld-card-640.jpg" alt="" width="640" height="360">
     </div>
   </div>
 
@@ -186,7 +209,7 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
             </ul>
             <p>20 965 рядків. Назви й імена відмінюються самі: «захопили Тисмил», «у Вландії».</p>
             <div class="btns">
-              <a class="btn btn-y" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3823641704">Steam Workshop</a>
+              <a class="btn btn-y" href="https://github.com/stepovyk/bannerlord-ukrainian/releases/latest">Завантажити</a>
               <a class="btn btn-g" href="https://www.nexusmods.com/mountandblade2bannerlord/mods/14111">Nexus Mods</a>
               <a class="btn btn-g" href="https://github.com/stepovyk/bannerlord-ukrainian">GitHub</a>
             </div>
@@ -230,6 +253,18 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
           <p>Повна українська озвучка: свій голос кожному персонажу, чиста вимова й правильні наголоси.</p>
           <div class="btns"><a class="btn btn-g" href="https://t.me/stepovyk_ua">Стежити в Telegram</a></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="steppe">
+    <div class="wrap">
+      <div class="steppe rise">
+        <div>
+          <img src="assets/steppe-logo.png" alt="Steppe" width="328" height="80" loading="lazy">
+          <p>Ще від Stepovyk: прості й гарні застосунки для Android, без реклами й стеження. «Копійка» для обліку витрат, «Смак» для рецептів і браузер «Обрій».</p>
+        </div>
+        <a class="btn btn-g" href="https://www.steppe.workers.dev">Сайт Steppe</a>
       </div>
     </div>
   </section>
