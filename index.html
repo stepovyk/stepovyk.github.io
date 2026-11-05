@@ -44,8 +44,8 @@ a{color:inherit}
 /* шапка */
 header{position:sticky;top:0;z-index:10;background:rgb(11 15 23 / .82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgb(255 255 255 / .06)}
 .bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:400 27px/1 "Kaushan Script",var(--head)}
-.brand img{width:38px;height:38px;border-radius:9px}
+.brand{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;font:400 31px/1 "Kaushan Script",var(--head);color:var(--text)}
+.brand .s{background:linear-gradient(var(--blue) 50%,var(--yellow) 50%);-webkit-background-clip:text;background-clip:text;color:transparent;padding:.08em 0}
 .nav{display:flex;gap:6px;align-items:center}
 .nav a{text-decoration:none;color:var(--muted);font:500 15px/1 var(--body);padding:14px 12px;border-radius:999px;transition:color .2s,background .2s}
 .nav a:hover{color:var(--text);background:var(--surface)}
@@ -140,7 +140,7 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
 <body>
 <header>
   <div class="wrap bar">
-    <a class="brand" href="#top" aria-label="Ігри українською – на початок"><img src="assets/icon.svg" alt="" width="38" height="38">Stepovyk</a>
+    <a class="brand" href="#top" aria-label="Ігри українською – на початок"><span class="s">S</span>tepovyk</a>
     <nav class="nav" aria-label="Розділи">
       <a class="opt" href="#games">Переклади</a>
       <a class="opt" href="#next">У роботі</a>
