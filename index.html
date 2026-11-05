@@ -30,7 +30,7 @@
 :root{
   --bg:#0b0f17;--surface:#131a26;--surface-2:#1a2332;--line:#243044;
   --text:#eef2f8;--muted:#a3aec0;--blue:#0057b8;--blue-hi:#2f7ee0;--yellow:#ffd500;
-  --r:20px;--gut:16px;
+  --r:20px;--gut:16px;--pad:clamp(22px,2.4vw,28px);
   --head:"Fira Sans Condensed",system-ui,sans-serif;--body:"Fira Sans",system-ui,sans-serif;
 }
 *{box-sizing:border-box}
@@ -68,9 +68,10 @@ header{position:sticky;top:0;z-index:10;background:rgb(11 15 23 / .82);backdrop-
 /* перший екран */
 .hero{padding:clamp(48px,8vw,104px) 0 clamp(16px,3vw,32px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,56px);align-items:center}
 @media (max-width:900px){.hero{grid-template-columns:1fr}}
-.collage{display:grid;grid-template-columns:1.35fr 1fr;grid-template-rows:1fr 1fr;gap:12px;aspect-ratio:16/11}
-.collage img{width:100%;height:100%;object-fit:cover;border-radius:16px;box-shadow:0 0 0 1px var(--line),0 18px 40px rgb(0 0 0 / .4)}
-.collage img:first-child{grid-row:1 / span 2}
+.hero-art{--m:linear-gradient(90deg,transparent,#000 18%,#000 86%,transparent),linear-gradient(transparent,#000 20%,#000 76%,transparent);margin:0 calc(-1 * var(--gut));aspect-ratio:5/4;-webkit-mask:var(--m);-webkit-mask-composite:source-in;mask:var(--m);mask-composite:intersect}
+.hero-art img{width:100%;height:100%;object-fit:cover}
+@media (min-width:600px){.hero-art{width:min(600px,100%);margin:0 auto}}
+@media (min-width:901px){.hero-art{width:auto;margin:0}}
 .hero-text{min-width:0}
 h1{font:700 clamp(46px,12vw,112px)/.92 var(--head);margin:0 0 28px;text-transform:uppercase;letter-spacing:-.01em}
 h1 span{display:block;color:var(--yellow)}
@@ -83,25 +84,27 @@ h2{font:700 clamp(36px,6vw,56px)/1 var(--head);margin:0 0 12px;text-transform:up
 .sub{color:var(--muted);margin:0 0 32px;font-size:18px;max-width:60ch;text-wrap:pretty}
 
 /* ігри */
-.games{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px}
+.games{display:grid;grid-template-columns:1fr;gap:20px}
+@media (min-width:980px){.games{grid-template-columns:repeat(3,1fr)}.game h3{min-height:2.1em}}
 .game{background:var(--surface);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;box-shadow:inset 0 0 0 1px var(--line);transition:transform .25s,box-shadow .25s}
 .game:hover{transform:translateY(-3px);box-shadow:inset 0 0 0 1px #34445e,0 20px 50px rgb(0 0 0 / .35)}
 .shot{position:relative;aspect-ratio:16/9;overflow:hidden;background:#05070b}
 .shot img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
 .game:hover .shot img{transform:scale(1.03)}
 .badge{position:absolute;right:14px;top:14px;background:var(--yellow);color:#14161a;font:700 14px/1 var(--head);text-transform:uppercase;letter-spacing:.04em;padding:8px 12px;border-radius:999px}
-.body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:14px;flex:1}
-h3{font:700 clamp(26px,3.4vw,32px)/1.05 var(--head);margin:0}
+.body{padding:var(--pad);display:flex;flex-direction:column;gap:14px;flex:1}
+h3{font:700 clamp(26px,3.4vw,32px)/1.05 var(--head);margin:0;text-wrap:balance}
 .facts{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
 .facts li{background:var(--surface-2);color:#d6dce7;font-size:15px;padding:7px 12px;border-radius:999px}
 .game p,.card p{margin:0;color:var(--muted);text-wrap:pretty}
 .game .btns{margin-top:auto;padding-top:6px}
 .game .btn-g{flex:1}
 .game .btn-y{flex:1 1 100%}
+@media (min-width:640px) and (max-width:979px){.game{flex-direction:row}.shot{flex:0 0 42%;aspect-ratio:auto;min-height:240px}.shot img{position:absolute;inset:0}}
 
 /* у роботі */
 .next{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px}
-.card{border-radius:var(--r);padding:26px;background:linear-gradient(160deg,var(--surface-2),var(--surface));box-shadow:inset 0 0 0 1px var(--line);display:flex;flex-direction:column;gap:14px}
+.card{border-radius:var(--r);padding:var(--pad);background:linear-gradient(160deg,var(--surface-2),var(--surface));box-shadow:inset 0 0 0 1px var(--line);display:flex;flex-direction:column;gap:14px}
 .tag{align-self:flex-start;font:600 14px/1 var(--head);text-transform:uppercase;letter-spacing:.05em;color:var(--yellow);display:flex;align-items:center;gap:8px}
 .tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 0 rgb(255 213 0 / .6);animation:pulse 2s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 8px rgb(255 213 0 / 0)}100%{box-shadow:0 0 0 0 rgb(255 213 0 / 0)}}
@@ -109,14 +112,13 @@ h3{font:700 clamp(26px,3.4vw,32px)/1.05 var(--head);margin:0}
 .card .btns{margin-top:auto}
 
 /* Steppe */
-#steppe{padding-top:0}
-.steppe{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 32px;padding:clamp(24px,4vw,40px);border-radius:var(--r);background:linear-gradient(160deg,var(--surface-2),var(--surface));box-shadow:inset 0 0 0 1px var(--line)}
+.steppe{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 32px;padding:var(--pad);border-radius:var(--r);background:linear-gradient(160deg,var(--surface-2),var(--surface));box-shadow:inset 0 0 0 1px var(--line)}
 .steppe>div{flex:1 1 420px;min-width:0}
 .steppe img{height:clamp(44px,6vw,64px);width:auto;margin:0 0 16px}
 .steppe p{margin:0;color:var(--muted);max-width:56ch;text-wrap:pretty}
 
 /* підтримка */
-.support{border-radius:28px;padding:clamp(28px,5vw,56px);background:linear-gradient(135deg,#0a3f84,var(--blue) 60%,#0b4a9a)}
+.support{border-radius:28px;padding:calc(var(--pad) * 2);background:linear-gradient(135deg,#0a3f84,var(--blue) 60%,#0b4a9a)}
 .support h2{color:#fff}
 .support .sub{color:#d7e5ff}
 .support .note{margin:22px 0 0;color:#d7e5ff;font-size:16px}
@@ -163,10 +165,8 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
       </button>
     </div>
     </div>
-    <div class="collage" aria-hidden="true">
-      <img src="assets/waw-640.jpg" srcset="assets/waw-640.jpg 640w, assets/waw.jpg 1280w" sizes="(max-width:900px) 60vw, 330px" alt="" width="640" height="360">
-      <img src="assets/bannerlord-640.jpg" alt="" width="640" height="360">
-      <img src="assets/rimworld-card-640.jpg" alt="" width="640" height="360">
+    <div class="hero-art" aria-hidden="true">
+      <img src="assets/art-hero-640.jpg" srcset="assets/art-hero-640.jpg 640w, assets/art-hero.jpg 1200w" sizes="(max-width:900px) 100vw, 560px" alt="" width="1200" height="960" fetchpriority="high">
     </div>
   </div>
 
@@ -177,7 +177,7 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
       <div class="games">
         <article class="game rise">
           <div class="shot">
-            <img src="assets/waw-640.jpg" srcset="assets/waw-640.jpg 640w, assets/waw.jpg 1280w" sizes="(max-width:980px) 100vw, 560px" alt="Українські субтитри в кампанії Call of Duty: World at War" width="1280" height="720" loading="lazy">
+            <img src="assets/art-waw-640.jpg" srcset="assets/art-waw-640.jpg 640w, assets/art-waw.jpg 1280w" sizes="(max-width:980px) 100vw, 560px" alt="Call of Duty: World at War" width="1280" height="720" loading="lazy">
             <span class="badge">Готово</span>
           </div>
           <div class="body">
@@ -195,11 +195,11 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
         </article>
         <article class="game rise">
           <div class="shot">
-            <img src="assets/bannerlord-640.jpg" srcset="assets/bannerlord-640.jpg 640w, assets/bannerlord.jpg 1280w" sizes="(max-width:980px) 100vw, 560px" alt="Головне меню Mount &amp; Blade II: Bannerlord українською" width="1280" height="720" loading="lazy">
+            <img src="assets/art-bannerlord-640.jpg" srcset="assets/art-bannerlord-640.jpg 640w, assets/art-bannerlord.jpg 1280w" sizes="(max-width:980px) 100vw, 560px" alt="Mount &amp; Blade II: Bannerlord" width="1280" height="720" loading="lazy">
             <span class="badge">Готово</span>
           </div>
           <div class="body">
-            <h3>Mount &amp; Blade II: Bannerlord</h3>
+            <h3>Mount&nbsp;&amp;&nbsp;Blade&nbsp;II: Bannerlord</h3>
             <ul class="facts">
               <li>Кампанія</li><li>Мережева гра</li><li>Відмінки й рід</li><li>Субтитри</li>
             </ul>
@@ -213,7 +213,7 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
         </article>
         <article class="game rise">
           <div class="shot">
-            <img src="assets/rimworld-card-640.jpg" srcset="assets/rimworld-card-640.jpg 640w, assets/rimworld-card.jpg 1280w" sizes="(max-width:980px) 100vw, 560px" alt="Планета RimWorld" width="1280" height="720" loading="lazy">
+            <img src="assets/art-rimworld-640.jpg" srcset="assets/art-rimworld-640.jpg 640w, assets/art-rimworld.jpg 1280w" sizes="(max-width:980px) 100vw, 560px" alt="RimWorld" width="1280" height="720" loading="lazy">
             <span class="badge">Готово</span>
           </div>
           <div class="body">
@@ -298,7 +298,7 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
 (() => {
   const io = 'IntersectionObserver' in window && new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-  }), { rootMargin: '0px 0px -8% 0px' });
+  }), { threshold: 0 });
   document.querySelectorAll('.rise').forEach(el => io ? io.observe(el) : el.classList.add('in'));
 
   const toast = document.querySelector('.toast');
