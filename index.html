@@ -25,7 +25,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Ігри українською","url":"https://stepovyk.github.io/","inLanguage":"uk"},{"@type":"Person","name":"Stepovyk","url":"https://stepovyk.github.io/","image":"https://stepovyk.github.io/assets/avatar-512.png","sameAs":["https://t.me/stepovyk_ua","https://github.com/stepovyk","https://www.nexusmods.com/users/174402135"]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@600;700&family=Fira+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@600;700&family=Fira+Sans:wght@400;500&family=Kaushan+Script&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#0b0f17;--surface:#131a26;--surface-2:#1a2332;--line:#243044;
@@ -44,8 +44,8 @@ a{color:inherit}
 /* шапка */
 header{position:sticky;top:0;z-index:10;background:rgb(11 15 23 / .82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgb(255 255 255 / .06)}
 .bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 23px/1 var(--head)}
-.brand img{width:36px;height:36px;border-radius:10px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:400 27px/1 "Kaushan Script",var(--head)}
+.brand img{width:38px;height:38px;border-radius:9px}
 .nav{display:flex;gap:6px;align-items:center}
 .nav a{text-decoration:none;color:var(--muted);font:500 15px/1 var(--body);padding:14px 12px;border-radius:999px;transition:color .2s,background .2s}
 .nav a:hover{color:var(--text);background:var(--surface)}
@@ -72,12 +72,9 @@ header{position:sticky;top:0;z-index:10;background:rgb(11 15 23 / .82);backdrop-
 .collage img{width:100%;height:100%;object-fit:cover;border-radius:16px;box-shadow:0 0 0 1px var(--line),0 18px 40px rgb(0 0 0 / .4)}
 .collage img:first-child{grid-row:1 / span 2}
 .hero-text{min-width:0}
-h1{font:700 clamp(46px,12vw,112px)/.92 var(--head);margin:0 0 24px;text-transform:uppercase;letter-spacing:-.01em}
+h1{font:700 clamp(46px,12vw,112px)/.92 var(--head);margin:0 0 28px;text-transform:uppercase;letter-spacing:-.01em}
 h1 span{display:block;color:var(--yellow)}
 @media (min-width:901px){h1{font-size:clamp(60px,7.2vw,84px)}}
-.flag{display:flex;width:80px;height:8px;border-radius:4px;overflow:hidden;margin:0 0 24px}
-.flag::before,.flag::after{content:"";flex:1}
-.flag::before{background:var(--blue)}.flag::after{background:var(--yellow)}
 .lead{font-size:clamp(19px,2.4vw,23px);color:#c9d1de;max-width:40ch;text-wrap:pretty;margin:0 0 32px}
 
 /* розділи */
@@ -143,7 +140,7 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
 <body>
 <header>
   <div class="wrap bar">
-    <a class="brand" href="#top" aria-label="Ігри українською – на початок"><img src="assets/icon.svg" alt="" width="36" height="36">Stepovyk</a>
+    <a class="brand" href="#top" aria-label="Ігри українською – на початок"><img src="assets/icon.svg" alt="" width="38" height="38">Stepovyk</a>
     <nav class="nav" aria-label="Розділи">
       <a class="opt" href="#games">Переклади</a>
       <a class="opt" href="#next">У роботі</a>
@@ -157,7 +154,6 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
   <div class="wrap hero">
     <div class="hero-text">
     <h1>Ігри<span>українською</span></h1>
-    <div class="flag" aria-hidden="true"></div>
     <p class="lead">Повні українські локалізації ігор. Безкоштовно, з встановленням за хвилину.</p>
     <div class="btns">
       <a class="btn btn-y" href="#games">Обрати гру</a>
