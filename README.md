@@ -4,6 +4,7 @@
 
 - [Call of Duty: World at War](https://github.com/stepovyk/cod-waw-ukrainian)
 - [Mount & Blade II: Bannerlord](https://github.com/stepovyk/bannerlord-ukrainian)
+- [RimWorld](https://github.com/Ludeon/RimWorld-Ukrainian/pull/40)
 
 Новини, нові переклади й голосування за наступну гру: [t.me/stepovyk_ua](https://t.me/stepovyk_ua)
 
