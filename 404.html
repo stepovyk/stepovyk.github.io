@@ -5,28 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Сторінку не знайдено – Stepovyk</title>
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#0b0f17">
-<meta name="color-scheme" content="dark">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0b0f17" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f4ee" media="(prefers-color-scheme: light)">
 <link rel="icon" href="/assets/icon.svg?v=07522242" type="image/svg+xml">
 <link rel="icon" href="/favicon.png?v=394325da" type="image/png" sizes="64x64">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@600;700&family=Fira+Sans:wght@400&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0b0f17;--text:#eef2f8;--muted:#a3aec0;--yellow:#f5b21e}
+@font-face{font-family:"Fixel Display";src:url(/assets/fonts/FixelDisplay-ExtraBold.woff2?v=1a6a3d1e) format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:"Fixel Text";src:url(/assets/fonts/FixelText-Regular.woff2?v=93bbd464) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Fixel Text";src:url(/assets/fonts/FixelText-Medium.woff2?v=2cba639b) format("woff2");font-weight:500;font-display:swap}
+:root{--bg:#0b0f17;--ink:#f4f0e8;--muted:#a9b3c4;--wheat:#f5b21e;--glow-sky:rgb(10 132 214 / .26);--glow-wheat:rgb(245 178 30 / .10)}
+@media (prefers-color-scheme:light){:root{--bg:#f7f4ee;--ink:#12161e;--muted:#566074;--glow-sky:rgb(10 132 214 / .16);--glow-wheat:rgb(245 178 30 / .16)}}
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px 16px;background:radial-gradient(900px 480px at 50% 0,rgb(10 132 214 / .30),transparent 70%),radial-gradient(800px 420px at 50% 100%,rgb(245 178 30 / .10),transparent 70%) no-repeat,var(--bg);color:var(--text);font:400 18px/1.55 "Fira Sans",system-ui,sans-serif;text-align:center}
-.logo{display:inline-block;margin:0 0 32px}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px 16px;background:radial-gradient(900px 480px at 50% 0,var(--glow-sky),transparent 70%),radial-gradient(800px 420px at 50% 100%,var(--glow-wheat),transparent 70%) no-repeat,var(--bg);color:var(--ink);font:400 18px/1.6 "Fixel Text",system-ui,sans-serif;text-align:center}
+.logo{display:inline-block;margin:0 0 36px}
 .logo img{display:block;height:64px;width:auto}
-h1{margin:0 0 12px;font:700 clamp(40px,8vw,64px)/1 "Fira Sans Condensed",system-ui,sans-serif;text-transform:uppercase}
-p{margin:0 0 32px;color:var(--muted)}
-.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:999px;background:var(--yellow);color:#14161a;font:600 18px/1 "Fira Sans Condensed",system-ui,sans-serif;text-decoration:none}
-.btn:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+h1{margin:0 0 14px;font:800 clamp(36px,9vw,64px)/1.02 "Fixel Display",system-ui,sans-serif;text-transform:uppercase;text-wrap:balance}
+p{margin:0 0 36px;color:var(--muted)}
+.btn{position:relative;isolation:isolate;display:inline-flex;align-items:center;min-height:58px;padding:0 34px;color:#12161e;font:500 18px/1 "Fixel Text",system-ui,sans-serif;text-decoration:none}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--wheat);-webkit-mask:url(/assets/brush-button.svg?v=2fb3fb62) center/100% 100% no-repeat;mask:url(/assets/brush-button.svg?v=2fb3fb62) center/100% 100% no-repeat;transition:transform .3s cubic-bezier(.3,1.4,.5,1)}
+.btn:hover::before{transform:scale(1.035,1.07) rotate(-.6deg)}
+:focus-visible{outline:3px solid var(--wheat);outline-offset:4px;border-radius:12px}
+@media (prefers-reduced-motion:reduce){.btn::before{transition:none}}
 </style>
 </head>
 <body>
 <main>
-  <a class="logo" href="/"><img src="/assets/logo.svg?v=143729be" alt="Stepovyk" width="192" height="64"></a>
+  <a class="logo" href="/"><img src="/assets/logo.svg?v=4d06c309" alt="Stepovyk" width="192" height="64"></a>
   <h1>Такої сторінки немає</h1>
   <p>Усі переклади – на головній.</p>
   <a class="btn" href="/">На головну</a>

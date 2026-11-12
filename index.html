@@ -6,151 +6,186 @@
 <title>Ігри українською – українізатори від Stepovyk</title>
 <meta name="description" content="Безкоштовні українізатори ігор від Stepovyk: Call of Duty: World at War, Mount &amp; Blade II: Bannerlord і RimWorld. Повний переклад, нові шрифти, встановлення за хвилину. Далі – уся серія Call of Duty і дубляж Bannerlord.">
 <link rel="canonical" href="https://stepovyk.github.io/">
-<meta name="theme-color" content="#0b0f17">
-<link rel="preload" href="assets/mark.webp?v=ee1c2dbb" as="image" type="image/webp">
-<meta name="color-scheme" content="dark">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0b0f17" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f4ee" media="(prefers-color-scheme: light)">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="uk_UA">
 <meta property="og:site_name" content="Ігри українською">
 <meta property="og:title" content="Ігри українською – українізатори від Stepovyk">
 <meta property="og:description" content="Безкоштовні повні українські локалізації: Call of Duty: World at War, Mount &amp; Blade II: Bannerlord і RimWorld. Далі – уся серія Call of Duty.">
 <meta property="og:url" content="https://stepovyk.github.io/">
-<meta property="og:image" content="https://stepovyk.github.io/assets/og.png?v=83cd9009">
+<meta property="og:image" content="https://stepovyk.github.io/assets/og.png?v=af72f81c">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/icon.svg?v=07522242" type="image/svg+xml">
 <link rel="icon" href="favicon.png?v=394325da" type="image/png" sizes="64x64">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2431407e">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=5f3677f6">
 <link rel="manifest" href="site.webmanifest">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Ігри українською","url":"https://stepovyk.github.io/","inLanguage":"uk"},{"@type":"Person","name":"Stepovyk","url":"https://stepovyk.github.io/","image":"https://stepovyk.github.io/assets/avatar-512.png","sameAs":["https://t.me/stepovyk_ua","https://github.com/stepovyk","https://www.nexusmods.com/users/174402135"]}]}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@600;700&family=Fira+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/FixelDisplay-ExtraBold.woff2?v=1a6a3d1e" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/FixelText-Regular.woff2?v=93bbd464" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/mark.webp?v=0e7e24c9" as="image" type="image/webp">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Ігри українською","url":"https://stepovyk.github.io/","inLanguage":"uk"},{"@type":"Person","name":"Stepovyk","url":"https://stepovyk.github.io/","image":"https://stepovyk.github.io/assets/avatar-512.png?v=5d06a269","sameAs":["https://t.me/stepovyk_ua","https://github.com/stepovyk","https://www.nexusmods.com/users/174402135"]}]}</script>
 <style>
+/* Fixel (MacPaw, OFL). Однакові метрики на всіх системах – тоді крапки «Ї» стають точно на місце. */
+@font-face{font-family:"Fixel Display";src:url(assets/fonts/FixelDisplay-ExtraBold.woff2?v=1a6a3d1e) format("woff2");font-weight:800;font-display:swap;ascent-override:95%;descent-override:25%;line-gap-override:0%}
+@font-face{font-family:"Fixel Text";src:url(assets/fonts/FixelText-Regular.woff2?v=93bbd464) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Fixel Text";src:url(assets/fonts/FixelText-Medium.woff2?v=2cba639b) format("woff2");font-weight:500;font-display:swap}
+
+/* кольори: ніч і папір міняються місцями за темою системи; небо й пшениця – зі знака */
 :root{
-  --bg:#0b0f17;--surface:#131a26;--surface-2:#1a2332;--line:#243044;
-  --text:#eef2f8;--muted:#a3aec0;--blue:#0b6bc4;--blue-hi:#1d82df;--yellow:#f5b21e;--sky:#0a84d6;
-  --r:20px;--gut:16px;--pad:clamp(22px,2.4vw,28px);
-  --head:"Fira Sans Condensed",system-ui,sans-serif;--body:"Fira Sans",system-ui,sans-serif;
+  --bg:#0b0f17;--ink:#f4f0e8;--muted:#a9b3c4;--soft:#cfd6e2;--faint:#7f8a9d;
+  --ghost:rgb(244 240 232 / .12);--ghost-hi:rgb(244 240 232 / .19);
+  --glow-sky:rgb(10 132 214 / .26);--glow-wheat:rgb(245 178 30 / .10);
+  --mono:#f4f0e8;--on-mono:#111214;          /* GitHub і monobank: чорно-білі бренди – інверсія до тла */
+  --sky:#0a84d6;--wheat:#f5b21e;--on-wheat:#12161e;--dot-yellow:#ffd500;
+  --tg:#1a7cba;--nexus:#d98f40;--privat:#2fab33;
+  --head:"Fixel Display",system-ui,sans-serif;--body:"Fixel Text",system-ui,sans-serif;
+  --gut:16px;
 }
+@media (prefers-color-scheme:light){:root{
+  --bg:#f7f4ee;--ink:#12161e;--muted:#566074;--soft:#343c4b;--faint:#6b7484;
+  --ghost:rgb(18 22 30 / .07);--ghost-hi:rgb(18 22 30 / .12);
+  --glow-sky:rgb(10 132 214 / .16);--glow-wheat:rgb(245 178 30 / .16);
+  --mono:#111214;--on-mono:#fff;--dot-yellow:#f5b21e;
+}}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:radial-gradient(900px 480px at 85% 0,rgb(10 132 214 / .30),transparent 70%),radial-gradient(800px 420px at 70% 640px,rgb(245 178 30 / .12),transparent 70%) no-repeat,var(--bg);color:var(--text);font:400 17px/1.55 var(--body);overflow-x:hidden}
+body{margin:0;background:radial-gradient(900px 520px at 88% -60px,var(--glow-sky),transparent 70%),radial-gradient(760px 420px at 70% 700px,var(--glow-wheat),transparent 70%) no-repeat,var(--bg);color:var(--ink);font:400 17px/1.6 var(--body);overflow-x:hidden}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
+::selection{background:var(--sky);color:#fff}
 .wrap{width:min(1120px,100% - 2*var(--gut));margin-inline:auto}
-:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:10px}
+:focus-visible{outline:3px solid var(--wheat);outline-offset:4px;border-radius:12px}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
-/* шапка */
-header{position:sticky;top:0;z-index:10;background:rgb(11 15 23 / .82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgb(255 255 255 / .06)}
-.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+/* мазок пензля: одна форма для кнопок, підкреслень, карток і смуги степу */
+.btn,.nav a,.toast{position:relative;isolation:isolate}
+.btn::before,.toast::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--paint);-webkit-mask:url(assets/brush-button.svg?v=2fb3fb62) center/100% 100% no-repeat;mask:url(assets/brush-button.svg?v=2fb3fb62) center/100% 100% no-repeat;transition:transform .3s cubic-bezier(.3,1.4,.5,1),background .2s}
+.btn:hover::before{transform:scale(1.035,1.07) rotate(-.6deg)}
+.btn:active::before{transform:scale(.97)}
+
+/* шапка: без ліній, лише плавне затемнення донизу */
+header{position:sticky;top:0;z-index:10;background:linear-gradient(var(--bg) 58%,transparent)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:76px;gap:12px}
 .brand{display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
-.brand img{height:34px;width:auto}
-.nav{display:flex;gap:6px;align-items:center}
-.nav a{text-decoration:none;color:var(--muted);font:500 15px/1 var(--body);padding:14px 12px;border-radius:999px;transition:color .2s,background .2s}
-.nav a:hover{color:var(--text);background:var(--surface)}
-.nav .btn,.nav .btn:hover{color:#fff;background:var(--blue)}
-.nav .btn:hover{background:var(--blue-hi)}
+.brand img{height:36px;width:auto}
+.nav{display:flex;gap:4px;align-items:center}
+.nav a:not(.btn){text-decoration:none;color:var(--soft);font:500 16px/1 var(--body);padding:14px 12px;transition:color .2s}
+.nav a:not(.btn):hover{color:var(--ink)}
+/* посилання в шапці: при наведенні пензель підкреслює слово */
+.nav a:not(.btn)::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:8px;background:var(--wheat);-webkit-mask:url(assets/brush-line.svg?v=4219aa5f) center/100% 100% no-repeat;mask:url(assets/brush-line.svg?v=4219aa5f) center/100% 100% no-repeat;clip-path:inset(0 100% 0 0);transition:clip-path .45s cubic-bezier(.6,0,.2,1)}
+.nav a:not(.btn):hover::after{clip-path:inset(0 0 0 0)}
+.nav .btn{min-height:48px;padding:0 22px;font-size:16px}
 @media (max-width:640px){.nav .opt{display:none}}
 
-/* кнопки */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;font:600 18px/1 var(--head);letter-spacing:.01em;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .2s,box-shadow .2s;white-space:nowrap}
-.btn:active{transform:scale(.97)}
-.btn svg{width:20px;height:20px;flex:none}
-.btn-y{background:var(--yellow);color:#14161a}
-.btn-y:hover{box-shadow:0 8px 28px rgb(245 178 30 / .32)}
-.btn-b{background:var(--blue);color:#fff}
-.btn-b:hover{background:var(--blue-hi)}
-.btn-g{background:var(--surface-2);color:var(--text);box-shadow:inset 0 0 0 1px var(--line)}
-.btn-g:hover{background:#223047}
-.btns{display:flex;flex-wrap:wrap;gap:10px}
+/* кнопки: колір і знак сервісу, куди веде кнопка */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:0 30px;font:500 18px/1 var(--body);text-decoration:none;border:0;background:none;cursor:pointer;white-space:nowrap;color:var(--on-wheat);--paint:var(--wheat)}
+.btn .i{width:22px;height:22px;flex:none;fill:currentColor}
+.btn-g{color:var(--ink);--paint:var(--ghost)}
+.btn-g:hover{--paint:var(--ghost-hi)}
+.tg{color:#fff;--paint:var(--tg)}
+.gh{color:var(--on-mono);--paint:var(--mono)}
+.nx{color:#12161e;--paint:var(--nexus)}
+.mono{color:var(--on-mono);--paint:var(--mono);padding:0 34px}
+.mono .i{width:118px;height:17px}
+.p24{color:#12161e;--paint:var(--privat)}
+.btns{display:flex;flex-wrap:wrap;gap:14px 12px}
 
 /* перший екран */
-.hero{padding:clamp(48px,8vw,104px) 0 clamp(16px,3vw,32px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,56px);align-items:center}
+.hero{padding:clamp(36px,7vw,96px) 0 clamp(24px,4vw,48px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(24px,4vw,56px);align-items:center}
 @media (max-width:900px){.hero{grid-template-columns:1fr}}
 .hero-art{display:flex;justify-content:center}
-.mark{display:block;width:auto;height:clamp(300px,52vw,560px);max-width:100%;filter:drop-shadow(0 24px 60px rgb(10 132 214 / .25))}
+.mark{display:block;width:auto;height:clamp(300px,50vw,540px);max-width:100%;filter:drop-shadow(0 28px 60px rgb(10 132 214 / .22))}
 .mark .stroke{stroke-dasharray:1 1;stroke-dashoffset:1;animation:paint 1.7s cubic-bezier(.55,0,.2,1) .25s forwards}
 @keyframes paint{to{stroke-dashoffset:0}}
-@media (max-width:900px){.hero-art{order:-1}.mark{height:clamp(260px,70vw,400px)}}
-.hero-text{min-width:0}
-h1{font:700 clamp(46px,12vw,112px)/.92 var(--head);margin:0 0 28px;text-transform:uppercase;letter-spacing:-.01em}
-h1 span{display:block;color:var(--yellow)}
-@media (min-width:901px){h1{font-size:clamp(60px,7.2vw,84px)}}
-.lead{font-size:clamp(19px,2.4vw,23px);color:#c9d1de;max-width:40ch;text-wrap:pretty;margin:0 0 32px}
+@media (max-width:900px){.hero-art{order:-1}.mark{height:clamp(240px,62vw,380px)}}
+/* «УКРАЇНСЬКОЮ» – 7.3 кегля завширшки: завжди влазить у свою колонку */
+h1{font:800 min(calc((100vw - 2*var(--gut))/7.6),104px)/.95 var(--head);margin:0 0 28px;text-transform:uppercase;letter-spacing:-.015em}
+h1>span{display:block}
+@media (min-width:901px){h1{font-size:clamp(56px,5.9vw,86px)}}
+/* пасхалка: крапки «Ї» – небо й пшениця */
+.yi{padding:0 .03em;margin:0 -.03em;color:transparent;-webkit-background-clip:text;background-clip:text;background-image:linear-gradient(transparent 18.6%,var(--ink) 18.6%),linear-gradient(90deg,var(--sky) 50%,var(--dot-yellow) 50%)}
+.lead{font-size:clamp(19px,2.3vw,22px);color:var(--soft);max-width:38ch;text-wrap:pretty;margin:0 0 34px}
 
 /* розділи */
-section{padding:clamp(40px,7vw,72px) 0}
-h2{font:700 clamp(36px,6vw,56px)/1 var(--head);margin:0 0 12px;text-transform:uppercase}
-.sub{color:var(--muted);margin:0 0 32px;font-size:18px;max-width:60ch;text-wrap:pretty}
+section{padding:clamp(44px,7vw,80px) 0}
+h2{font:800 clamp(38px,6vw,58px)/1.02 var(--head);margin:0 0 16px;text-transform:uppercase;letter-spacing:-.01em}
+h2::after{content:"";display:block;width:min(220px,2.6em);height:16px;margin-top:14px;background:var(--wheat);-webkit-mask:url(assets/brush-line.svg?v=4219aa5f) center/100% 100% no-repeat;mask:url(assets/brush-line.svg?v=4219aa5f) center/100% 100% no-repeat;clip-path:inset(0 100% 0 0);transition:clip-path .9s cubic-bezier(.6,0,.2,1) .2s}
+h2.in::after{clip-path:inset(0 0 0 0)}
+.sub{color:var(--muted);margin:0 0 40px;font-size:18px;max-width:58ch;text-wrap:pretty}
+h3{font:800 clamp(26px,3.2vw,32px)/1.08 var(--head);margin:0;text-wrap:balance}
 
-/* ігри */
-.games{display:grid;grid-template-columns:1fr;gap:20px}
-@media (min-width:980px){.games{grid-template-columns:repeat(3,1fr)}.game h3{min-height:2.1em}}
-.game{background:var(--surface);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;box-shadow:inset 0 0 0 1px var(--line);transition:transform .25s,box-shadow .25s}
-.game:hover{transform:translateY(-3px);box-shadow:inset 0 0 0 1px #34445e,0 20px 50px rgb(0 0 0 / .35)}
-.shot{position:relative;aspect-ratio:16/9;overflow:hidden;background:#05070b}
-.shot img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.game:hover .shot img{transform:scale(1.03)}
-.badge{position:absolute;right:14px;top:14px;background:var(--yellow);color:#14161a;font:700 14px/1 var(--head);text-transform:uppercase;letter-spacing:.04em;padding:8px 12px;border-radius:999px}
-.body{padding:var(--pad);display:flex;flex-direction:column;gap:14px;flex:1}
-h3{font:700 clamp(26px,3.4vw,32px)/1.05 var(--head);margin:0;text-wrap:balance}
-.facts{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
-.facts li{background:var(--surface-2);color:#d6dce7;font-size:15px;padding:7px 12px;border-radius:999px}
-.game p,.card p{margin:0;color:var(--muted);text-wrap:pretty}
-.game .btns{margin-top:auto;padding-top:6px}
-.game .btn-g{flex:1}
-.game .btn-y{flex:1 1 100%}
-@media (min-width:640px) and (max-width:979px){.game{flex-direction:row}.shot{flex:0 0 42%;aspect-ratio:auto;min-height:240px}.shot img{position:absolute;inset:0}}
+/* ігри: великий арт у мазку пензля, поруч коротко й кнопки; на широкому екрані арт по черзі ліворуч і праворуч */
+.games{display:grid;gap:clamp(56px,8vw,96px)}
+.game{display:grid;gap:20px;align-items:center}
+@media (min-width:760px){.game{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(32px,5vw,64px)}.game:nth-child(even) .shot{order:2}}
+.info{display:flex;flex-direction:column;gap:14px;min-width:0}
+.shot{aspect-ratio:1280/560;overflow:hidden;-webkit-mask:url(assets/brush-block.svg?v=e4f9a97d) center/100% 100% no-repeat;mask:url(assets/brush-block.svg?v=e4f9a97d) center/100% 100% no-repeat}
+.shot img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.game:hover .shot img{transform:scale(1.04)}
+.facts{margin:0;color:var(--ink);font:500 15px/1.4 var(--body)}
+.info p:not(.facts),.plan p{margin:0;color:var(--muted);text-wrap:pretty}
+.info .btns{padding-top:8px}
+.game .btn{flex:1 1 0;min-height:50px;padding:0 18px;font-size:16px;gap:8px}
+.game .btn .i{width:20px;height:20px}
+.game .dl{flex-basis:100%;min-height:58px;font-size:18px}
 
-/* у роботі */
-.next{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px}
-.card{border-radius:var(--r);padding:var(--pad);background:linear-gradient(160deg,var(--surface-2),var(--surface));box-shadow:inset 0 0 0 1px var(--line);display:flex;flex-direction:column;gap:14px}
-.tag{align-self:flex-start;font:600 14px/1 var(--head);text-transform:uppercase;letter-spacing:.05em;color:var(--yellow);display:flex;align-items:center;gap:8px}
-.tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 0 rgb(245 178 30 / .6);animation:pulse 2s infinite}
-@keyframes pulse{70%{box-shadow:0 0 0 8px rgb(245 178 30 / 0)}100%{box-shadow:0 0 0 0 rgb(245 178 30 / 0)}}
-.card p{margin:0;color:var(--muted)}
-.card .btns{margin-top:auto}
+/* далі в роботі */
+.next{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:48px 56px}
+.plan{display:flex;flex-direction:column;gap:14px}
+.tag{align-self:flex-start;font:500 14px/1 var(--body);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);display:flex;align-items:center;gap:10px}
+.tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--wheat);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgb(245 178 30 / .6)}70%,100%{box-shadow:0 0 0 8px rgb(245 178 30 / 0)}}
+.plan .btns{margin-top:6px}
 
 /* Steppe */
-.steppe{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 32px;padding:var(--pad);border-radius:var(--r);background:linear-gradient(160deg,var(--surface-2),var(--surface));box-shadow:inset 0 0 0 1px var(--line)}
+.steppe{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px 40px}
 .steppe>div{flex:1 1 420px;min-width:0}
-.steppe img{height:clamp(44px,6vw,64px);width:auto;margin:0 0 16px}
+.steppe img{height:clamp(44px,6vw,60px);width:auto;margin:0 0 18px}
 .steppe p{margin:0;color:var(--muted);max-width:56ch;text-wrap:pretty}
 
-/* підтримка */
-.support{border-radius:28px;padding:calc(var(--pad) * 2);background:linear-gradient(135deg,#08508f,var(--blue) 55%,#0a84d6)}
-.support h2{color:#fff}
-.support .sub{color:#d7e5ff}
-.support .note{margin:22px 0 0;color:#d7e5ff;font-size:16px}
-.support .note a{color:#fff}
+/* підтримка: мазок, крізь який видно степ, як у знаку */
+.field{height:clamp(130px,22vw,250px);margin:0 0 clamp(32px,5vw,48px);-webkit-mask:url(assets/brush-panel.svg?v=1be01bbf) center/100% 100% no-repeat;mask:url(assets/brush-panel.svg?v=1be01bbf) center/100% 100% no-repeat;clip-path:inset(0 100% 0 0);transition:clip-path 1.4s cubic-bezier(.6,0,.2,1)}
+.field.in{clip-path:inset(0 0 0 0)}
+.field img{width:100%;height:100%;object-fit:cover;object-position:50% 58%}
+.donate .btn{min-width:min(210px,100%)}
+.note{margin:26px 0 0;color:var(--muted);font-size:16px}
 
-footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
-.foot{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:28px}
+footer{padding:24px 0 56px;color:var(--muted);font-size:15px}
+.foot{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center}
 .foot nav{display:flex;flex-wrap:wrap;gap:0 8px;margin:0 -10px}
-.foot nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 10px}
-.foot a{text-decoration:none}.foot a:hover{color:var(--text)}
-.brand-foot img{height:30px}
-.legal{margin:16px 0 0;font-size:14px;color:#7d889b}
+.foot nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 10px;text-decoration:none;transition:color .2s}
+.foot nav a:hover{color:var(--ink)}
+.brand-foot img{height:32px}
+.legal{margin:18px 0 0;font-size:14px;color:var(--faint)}
 
 /* поява */
 .rise{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
 .rise.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rise{opacity:1;transform:none}.mark .stroke{stroke-dashoffset:0}}
-.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--text);color:var(--bg);font:500 16px/1 var(--body);padding:14px 20px;border-radius:999px;opacity:0;pointer-events:none;transition:.25s;z-index:20}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);color:var(--bg);font:500 16px/1 var(--body);padding:18px 30px;opacity:0;pointer-events:none;transition:.25s;z-index:20;--paint:var(--ink)}
 .toast.on{opacity:1;transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rise{opacity:1;transform:none}.mark .stroke{stroke-dashoffset:0}h2::after,.field{clip-path:none}}
 </style>
 </head>
 <body>
+<!-- знаки сервісів для кнопок: Telegram, GitHub (Simple Icons, CC0), Nexus Mods, Приват24, monobank -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-tg" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></symbol>
+  <symbol id="i-gh" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+  <symbol id="i-nx" viewBox="0 0 24 24"><path d="M17.376 0c-.993 0-2.18.686-2.907 1.182-1.676-.36-4.036-.545-6.787.635-1.365-.513-2.425-.562-3.32-.488a2.16 2.16 0 0 0-1.27.429c-.33.22-2.788 2.69-3.069 4.652C-.15 7.508.68 8.932 1.218 9.718c-.44 1.76-.2 4.572.517 6.188-.353 1.041-.713 2.089-.664 3.205.01.584.061 1.188.398 1.684C1.72 21.19 4.528 24 6.545 24c.957 0 1.93-.428 3.07-1.24 2.16.383 4.402.348 6.448-.532 2.573 1.001 4.224.625 4.84.162.587-.457 2.826-2.915 3.07-4.622.1-.672-.023-1.638-1.226-3.397a10.983 10.983 0 0 0-.501-6.455c.396-1.069.673-2.188.59-3.337-.015-.68-.221-1.167-.487-1.507-.209-.335-2.415-2.39-4.028-2.91A3.105 3.105 0 0 0 17.376 0m-.03 2.082c.65.015 2.155 1.093 3.01 1.906l.355.34c-.959-.163-2.125.428-3.26 1.55a10.28 10.28 0 0 0-1.358 1.595c-.28.384-.517.768-.753 1.285l1.18.635-3.895 1.477-1.122-4.18 1.033.547c1.358-3.102 2.524-3.973 3.232-4.416h.015a5.12 5.12 0 0 1 1.49-.724zM12 3.065a8.932 8.932 0 0 1 2.22.279 7.67 7.67 0 0 0-.42.488 8.403 8.403 0 0 0-1.8-.196 8.336 8.336 0 0 0-5.897 2.432 7.86 7.86 0 0 1-.37-.433A8.905 8.905 0 0 1 12 3.065m-7.076.305c.71-.002 1.309.127 2.2.466a9.526 9.526 0 0 0-1.713 1.337c-.327-.542-.624-1.156-.488-1.803m-.606.042c-.162.96.428 2.126 1.55 3.264.457.487 1.003.945 1.594 1.358.383.281.767.517 1.283.754l.62-1.182 1.49 3.914-4.176 1.122.546-1.033c-3.099-1.36-3.969-2.526-4.412-3.235v-.015a5.144 5.144 0 0 1-.723-1.491l-.015-.074c.015-.65 1.092-2.156 1.904-3.013Zm16.035 1.483a1.259 1.259 0 0 1 .26.015l.14.023a5.05 5.05 0 0 1-.13 1.137v.015c-.1.383-.228.765-.377 1.148a9.526 9.526 0 0 0-1.346-1.776c.547-.357 1.051-.546 1.453-.562M18.43 5.8a8.903 8.903 0 0 1 2.506 6.2 8.937 8.937 0 0 1-.27 2.183 7.658 7.658 0 0 0-.488-.425A8.407 8.407 0 0 0 20.364 12 8.334 8.334 0 0 0 18 6.173a7.904 7.904 0 0 1 .429-.373M3.315 9.905c.157.148.319.29.488.425A8.417 8.417 0 0 0 3.636 12c0 2.248.887 4.286 2.327 5.788a8.11 8.11 0 0 1-.426.376A8.902 8.902 0 0 1 3.065 12a8.937 8.937 0 0 1 .25-2.095m13.988 1.541-.546 1.034c3.098 1.359 3.969 2.526 4.412 3.235v.014c.34.488.575.99.723 1.492l.014.074c-.014.65-1.092 2.156-1.903 3.013l-.34.354c.163-.96-.427-2.127-1.549-3.264a10.298 10.298 0 0 0-1.594-1.359 7.008 7.008 0 0 0-1.283-.753l-.605 1.152-1.505-3.87zm-6.006 1.684 1.121 4.18-1.033-.547c-1.357 3.102-2.523 3.973-3.231 4.416h-.015c-.487.34-.989.576-1.49.724l-.074.015c-.65-.015-2.154-1.093-3.01-1.906l-.354-.34c.959.163 2.124-.428 3.26-1.55.488-.458.945-1.004 1.358-1.595.28-.384.517-.768.753-1.285l-1.166-.635ZM3.72 16.663A9.526 9.526 0 0 0 5.086 18.5c-.697.47-1.33.665-1.777.59l-.138-.024c0-.367.038-.748.128-1.137v-.015c.11-.417.254-.835.42-1.252m14.131 1.314c.129.14.253.283.372.43A8.904 8.904 0 0 1 12 20.936a8.932 8.932 0 0 1-2.282-.296 7.757 7.757 0 0 0 .417-.487 8.335 8.335 0 0 0 7.716-2.175m.696.889c.43.666.607 1.267.534 1.698l-.023.138a5.034 5.034 0 0 1-1.136-.128h-.014a10.718 10.718 0 0 1-1.114-.366 9.526 9.526 0 0 0 1.753-1.342"/></symbol>
+  <symbol id="i-p24" viewBox="18 18 34 34"><path d="M35.29,52.00 C35.29,51.29 35.30,46.55 35.30,46.15 C35.30,40.06 30.31,34.58 24.22,34.58 L18.00,34.58 L18.00,52 L18,52 L18,18 L52,18 L52,52 L35.29,52 L35.29,52.00 Z M25.15,25.15 L25.15,27.71 C25.15,27.71 31.97,28.14 36.78,33.00 C41.60,37.86 42.20,44.84 42.20,44.84 L44.84,44.84 L44.84,25.15 L25.15,25.15 Z"/><rect width="13.12" height="13.12" x="18" y="38.88"/></symbol>
+  <symbol id="i-mono" viewBox="40 13984 8984 1282"><path d="m1413 15243v-659c0-187-100-276-268-276-140 0-260 83-313 166-34-104-119-166-253-166-140 0-260 87-298 142v-119h-240v912h240v-613c36-51 106-108 189-108 98 0 136 60 136 145v576h242v-615c34-49 104-106 189-106 98 0 136 60 136 145l0 576zm659 23c-300 0-481-219-481-479 0-259 181-478 481-478 302 0 483 219 483 478 0 260-181 479-483 479zm0-213c149 0 234-123 234-266 0-142-85-264-234-264s-232 123-232 264c0 143 83 266 232 266zm1516 191v-644c0-177-96-291-296-291-149 0-260 72-319 142v-119h-240v912h240v-613c40-55 113-108 208-108 102 0 168 43 168 170v551zm661 23c-300 0-481-219-481-479 0-259 181-478 481-478 302 0 483 219 483 478 0 260-181 479-483 479zm0-213c149 0 234-123 234-266 0-142-85-264-234-264s-232 123-232 264c0 143 83 266 232 266zm900-102c40 59 128 102 206 102 140 0 232-106 232-264s-92-266-232-266c-77 0-166 45-206 106zm0 293h-240v-1259h240v464c72-92 174-140 281-140 232 0 404 181 404 479 0 304-174 478-404 478-109 0-210-49-281-140zm1654 0h-240v-94c-62 74-170 117-289 117-145 0-317-98-317-302 0-213 172-294 317-294 121 0 228 40 289 111v-123c0-92-79-153-200-153-98 0-189 36-266 108l-91-160c111-98 255-143 398-143 208 0 398 83 398 345zm-432-140c77 0 153-26 193-79v-113c-40-53-115-79-193-79-94 0-172 49-172 138 0 85 77 134 172 134zm1525 140v-644c0-177-96-291-296-291-149 0-260 72-319 142v-119h-240v912h240v-613c40-55 113-108 208-108 102 0 168 43 168 170v551zm1129 0-372-498 361-413h-294l-345 406v-753h-240v1259h240v-234l109-117 242 351z"/></symbol>
+</svg>
 <header>
   <div class="wrap bar">
-    <a class="brand" href="#top" aria-label="Stepovyk – на початок"><img src="assets/logo.svg?v=143729be" alt="Stepovyk" width="102" height="34"></a>
+    <a class="brand" href="#top" aria-label="Stepovyk – на початок"><img src="assets/logo.svg?v=4d06c309" alt="Stepovyk" width="108" height="36"></a>
     <nav class="nav" aria-label="Розділи">
       <a class="opt" href="#games">Переклади</a>
       <a class="opt" href="#next">У роботі</a>
       <a class="opt" href="#support">Підтримати</a>
-      <a class="btn btn-b" href="https://t.me/stepovyk_ua" style="min-height:44px;padding:0 18px;font-size:16px">Telegram</a>
+      <a class="btn tg" href="https://t.me/stepovyk_ua"><svg class="i" aria-hidden="true"><use href="#i-tg"/></svg>Telegram</a>
     </nav>
   </div>
 </header>
@@ -158,15 +193,15 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
 <main id="top">
   <div class="wrap hero">
     <div class="hero-text">
-    <h1>Ігри<span>українською</span></h1>
-    <p class="lead">Повні українські локалізації ігор. Безкоштовно, з встановленням за хвилину.</p>
-    <div class="btns">
-      <a class="btn btn-y" href="#games">Обрати гру</a>
-      <button class="btn btn-g" type="button" data-share>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v14"/></svg>
-        Поділитися
-      </button>
-    </div>
+      <h1>Ігри<span>Укра<span class="yi">ї</span>нською</span></h1>
+      <p class="lead">Повні українські локалізації ігор. Безкоштовно, з встановленням за хвилину.</p>
+      <div class="btns">
+        <a class="btn" href="#games">Обрати гру</a>
+        <button class="btn btn-g" type="button" data-share>
+          <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="fill:none"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v14"/></svg>
+          Поділитися
+        </button>
+      </div>
     </div>
     <div class="hero-art">
       <!-- знак: з mark.py, пише sync.py -->
@@ -176,7 +211,7 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
       <path class="stroke" d="M1309,442 L1032,318 L1016,306 L999,290 L982,273 L965,257 L948,245 L931,240 L914,238 L897,235 L880,233 L863,229 L846,226 L829,222 L812,218 L795,214 L778,209 L761,203 L744,197 L727,193 L710,192 L693,193 L676,198 L659,203 L642,208 L625,211 L608,214 L591,217 L574,221 L557,224 L540,227 L523,230 L506,233 L489,237 L472,241 L455,246 L438,251 L421,258 L404,265 L387,274 L370,284 L353,296 L337,310 L323,326 L313,343 L306,360 L301,377 L295,394 L290,411 L285,428 L281,445 L276,462 L273,479 L274,496 L278,513 L282,530 L287,547 L292,564 L298,581 L304,598 L310,615 L317,632 L328,649 L343,664 L360,676 L377,686 L394,694 L411,701 L428,708 L445,715 L462,721 L479,726 L496,732 L513,737 L530,742 L547,747 L564,752 L581,756 L598,761 L615,765 L632,769 L649,773 L666,777 L683,782 L700,787 L717,791 L734,796 L751,801 L768,807 L785,812 L802,818 L819,824 L836,831 L853,838 L870,846 L887,854 L904,864 L921,877 L936,892 L947,909 L954,926 L961,943 L967,960 L972,977 L978,994 L983,1011 L988,1028 L992,1045 L994,1062 L992,1079 L987,1096 L982,1113 L977,1130 L972,1147 L967,1164 L961,1181 L955,1198 L947,1215 L934,1231 L918,1246 L901,1259 L884,1270 L867,1279 L850,1287 L833,1294 L816,1300 L799,1305 L782,1309 L765,1313 L748,1316 L731,1319 L714,1322 L697,1324 L680,1327 L663,1329 L646,1332 L629,1334 L612,1338 L595,1341 L578,1346 L561,1351 L544,1356 L527,1356 L510,1352 L493,1345 L476,1340 L459,1336 L442,1332 L425,1328 L408,1324 L391,1320 L374,1316 L357,1312 L340,1307 L323,1302 L306,1297 L289,1288 L272,1274 L255,1257 L238,1240 L221,1223 L204,1209 L187,1199 L173,1195" pathLength="1" fill="none" stroke="#fff" stroke-width="506" stroke-linecap="round" stroke-linejoin="round"/>
     </mask>
   </defs>
-  <image href="assets/mark.webp?v=ee1c2dbb" width="1237" height="1567" mask="url(#brush)"/>
+  <image href="assets/mark.webp?v=0e7e24c9" width="1237" height="1567" mask="url(#brush)"/>
 </svg>
       <!-- /знак -->
     </div>
@@ -189,55 +224,40 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
       <div class="games">
         <!-- ігри: з games.json, пише sync.py -->
         <article class="game rise">
-          <div class="shot">
-            <img src="assets/art-waw-640.jpg" srcset="assets/art-waw-640.jpg 640w, assets/art-waw.jpg 1280w" sizes="(max-width:980px) 100vw, 560px" alt="Call of Duty: World at War" width="1280" height="720" loading="lazy">
-            <span class="badge">Готово</span>
-          </div>
-          <div class="body">
-            <h3>Call&nbsp;of&nbsp;Duty: World&nbsp;at&nbsp;War</h3>
-            <ul class="facts">
-              <li>Кампанія</li><li>Зомбі</li><li>Мультиплеєр</li><li>Нові шрифти</li>
-            </ul>
+          <div class="shot"><img src="assets/card-waw-640.jpg?v=648511e9" srcset="assets/card-waw-640.jpg?v=648511e9 640w, assets/card-waw.jpg?v=8890bd3e 1280w" sizes="(max-width:760px) 100vw, 620px" alt="" width="1280" height="560" loading="lazy"></div>
+          <div class="info">
+            <h3 class="sr">Call&nbsp;of&nbsp;Duty: World&nbsp;at&nbsp;War</h3>
+            <p class="facts">Кампанія · Зомбі · Мультиплеєр · Нові шрифти</p>
             <p>Понад 9 600 рядків з живою редактурою. Інсталятор ставить і прибирає переклад в один клік.</p>
             <div class="btns">
-              <a class="btn btn-y" href="https://github.com/stepovyk/cod-waw-ukrainian/releases/latest">Завантажити</a>
-              <a class="btn btn-g" href="https://www.nexusmods.com/callofdutyworldatwar/mods/138">Nexus Mods</a>
-              <a class="btn btn-g" href="https://github.com/stepovyk/cod-waw-ukrainian">GitHub</a>
+              <a class="btn dl" href="https://github.com/stepovyk/cod-waw-ukrainian/releases/latest"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="fill:none"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>Завантажити</a>
+              <a class="btn nx" href="https://www.nexusmods.com/callofdutyworldatwar/mods/138"><svg class="i" aria-hidden="true"><use href="#i-nx"/></svg>Nexus Mods</a>
+              <a class="btn gh" href="https://github.com/stepovyk/cod-waw-ukrainian"><svg class="i" aria-hidden="true"><use href="#i-gh"/></svg>GitHub</a>
             </div>
           </div>
         </article>
         <article class="game rise">
-          <div class="shot">
-            <img src="assets/art-bannerlord-640.jpg" srcset="assets/art-bannerlord-640.jpg 640w, assets/art-bannerlord.jpg 1280w" sizes="(max-width:980px) 100vw, 560px" alt="Mount &amp; Blade II: Bannerlord" width="1280" height="720" loading="lazy">
-            <span class="badge">Готово</span>
-          </div>
-          <div class="body">
-            <h3>Mount&nbsp;&amp;&nbsp;Blade&nbsp;II: Bannerlord</h3>
-            <ul class="facts">
-              <li>Кампанія</li><li>Мережева гра</li><li>Відмінки й рід</li><li>Субтитри</li>
-            </ul>
+          <div class="shot"><img src="assets/card-bannerlord-640.jpg?v=d2f9bd0d" srcset="assets/card-bannerlord-640.jpg?v=d2f9bd0d 640w, assets/card-bannerlord.jpg?v=f66aabbe 1280w" sizes="(max-width:760px) 100vw, 620px" alt="" width="1280" height="560" loading="lazy"></div>
+          <div class="info">
+            <h3 class="sr">Mount&nbsp;&amp;&nbsp;Blade&nbsp;II: Bannerlord</h3>
+            <p class="facts">Кампанія · Мережева гра · Відмінки й рід · Субтитри</p>
             <p>20 965 рядків. Назви й імена відмінюються самі: «захопили Тисмил», «у Вландії».</p>
             <div class="btns">
-              <a class="btn btn-y" href="https://github.com/stepovyk/bannerlord-ukrainian/releases/latest">Завантажити</a>
-              <a class="btn btn-g" href="https://www.nexusmods.com/mountandblade2bannerlord/mods/14111">Nexus Mods</a>
-              <a class="btn btn-g" href="https://github.com/stepovyk/bannerlord-ukrainian">GitHub</a>
+              <a class="btn dl" href="https://github.com/stepovyk/bannerlord-ukrainian/releases/latest"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="fill:none"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>Завантажити</a>
+              <a class="btn nx" href="https://www.nexusmods.com/mountandblade2bannerlord/mods/14111"><svg class="i" aria-hidden="true"><use href="#i-nx"/></svg>Nexus Mods</a>
+              <a class="btn gh" href="https://github.com/stepovyk/bannerlord-ukrainian"><svg class="i" aria-hidden="true"><use href="#i-gh"/></svg>GitHub</a>
             </div>
           </div>
         </article>
         <article class="game rise">
-          <div class="shot">
-            <img src="assets/art-rimworld-640.jpg" srcset="assets/art-rimworld-640.jpg 640w, assets/art-rimworld.jpg 1280w" sizes="(max-width:980px) 100vw, 560px" alt="RimWorld" width="1280" height="720" loading="lazy">
-            <span class="badge">Готово</span>
-          </div>
-          <div class="body">
-            <h3>RimWorld</h3>
-            <ul class="facts">
-              <li>Нова редакція</li><li>Усі DLC</li><li>Відмінки й рід</li><li>Версія 1.7</li>
-            </ul>
+          <div class="shot"><img src="assets/card-rimworld-640.jpg?v=e5cfbd1d" srcset="assets/card-rimworld-640.jpg?v=e5cfbd1d 640w, assets/card-rimworld.jpg?v=52b129f9 1280w" sizes="(max-width:760px) 100vw, 620px" alt="" width="1280" height="560" loading="lazy"></div>
+          <div class="info">
+            <h3 class="sr">RimWorld</h3>
+            <p class="facts">Нова редакція · Усі DLC · Відмінки й рід · Версія 1.7</p>
             <p>Уся українська перебрана заново, генератор історій нарешті українською. Згодом вийде в офіційному оновленні гри.</p>
             <div class="btns">
-              <a class="btn btn-y" href="https://t.me/stepovyk_ua/16">Завантажити</a>
-              <a class="btn btn-g" href="https://github.com/Ludeon/RimWorld-Ukrainian/pull/40">GitHub</a>
+              <a class="btn dl" href="https://t.me/stepovyk_ua/16"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="fill:none"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>Завантажити</a>
+              <a class="btn gh" href="https://github.com/Ludeon/RimWorld-Ukrainian/pull/40"><svg class="i" aria-hidden="true"><use href="#i-gh"/></svg>GitHub</a>
             </div>
           </div>
         </article>
@@ -251,17 +271,17 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
       <h2 class="rise">Далі в роботі</h2>
       <p class="sub rise">Переклади виходять по черзі. Новини й голосування – у Telegram.</p>
       <div class="next">
-        <div class="card rise">
+        <div class="plan rise">
           <span class="tag">Голосування</span>
           <h3>Уся серія Call of Duty</h3>
           <p>World at War – лише початок. Яку частину перекладаю наступною, вирішуєте ви.</p>
-          <div class="btns"><a class="btn btn-y" href="https://t.me/stepovyk_ua/13">Проголосувати</a></div>
+          <div class="btns"><a class="btn tg" href="https://t.me/stepovyk_ua/13"><svg class="i" aria-hidden="true"><use href="#i-tg"/></svg>Проголосувати</a></div>
         </div>
-        <div class="card rise">
+        <div class="plan rise">
           <span class="tag">У роботі</span>
           <h3>Дубляж Bannerlord</h3>
           <p>Повна українська озвучка: свій голос кожному персонажу, чиста вимова й правильні наголоси.</p>
-          <div class="btns"><a class="btn btn-g" href="https://t.me/stepovyk_ua">Стежити в Telegram</a></div>
+          <div class="btns"><a class="btn tg" href="https://t.me/stepovyk_ua"><svg class="i" aria-hidden="true"><use href="#i-tg"/></svg>Стежити в Telegram</a></div>
         </div>
       </div>
     </div>
@@ -271,7 +291,7 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
     <div class="wrap">
       <div class="steppe rise">
         <div>
-          <img src="assets/steppe-logo.png" alt="Steppe" width="328" height="80" loading="lazy">
+          <picture><source srcset="assets/steppe-logo-light.png?v=c86d22d9" media="(prefers-color-scheme: light)"><img src="assets/steppe-logo.png?v=aa021c91" alt="Steppe" width="328" height="80" loading="lazy"></picture>
           <p>Ще від Stepovyk: прості й гарні застосунки для Android, без реклами й стеження. «Копійка» для обліку витрат, «Смак» для рецептів і браузер «Обрій».</p>
         </div>
         <a class="btn btn-g" href="https://www.steppe.workers.dev">Сайт Steppe</a>
@@ -281,15 +301,14 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
 
   <section id="support">
     <div class="wrap">
-      <div class="support rise">
-        <h2>Підтримати</h2>
-        <p class="sub">Усі переклади безкоштовні й такими лишаться. Кожна гривня наближає наступну гру.</p>
-        <div class="btns">
-          <a class="btn btn-y" href="https://send.monobank.ua/jar/8aeC9dGFrn">Monobank</a>
-          <a class="btn btn-g" href="https://www.privat24.ua/send/kkyqm" style="background:#fff;color:#0b2a55;box-shadow:none">Приват24</a>
-        </div>
-        <p class="note">Без грошей теж можна: поділіться сайтом або поставте Endorse на Nexus.</p>
+      <div class="field rise" aria-hidden="true"><img src="assets/steppe-800.webp?v=0536205c" srcset="assets/steppe-800.webp?v=0536205c 800w, assets/steppe-1600.webp?v=ecb20820 1600w" sizes="(max-width:1152px) 100vw, 1120px" alt="" width="1600" height="679" loading="lazy"></div>
+      <h2 class="rise">Підтримати</h2>
+      <p class="sub rise">Усі переклади безкоштовні й такими лишаться. Кожна гривня наближає наступну гру.</p>
+      <div class="btns donate rise">
+        <a class="btn mono" href="https://send.monobank.ua/jar/8aeC9dGFrn" aria-label="Банка monobank"><svg class="i" aria-hidden="true"><use href="#i-mono"/></svg></a>
+        <a class="btn p24" href="https://www.privat24.ua/send/kkyqm"><svg class="i" aria-hidden="true"><use href="#i-p24"/></svg>Приват24</a>
       </div>
+      <p class="note rise">Без грошей теж можна: поділіться сайтом або поставте Endorse на Nexus.</p>
     </div>
   </section>
 </main>
@@ -297,7 +316,7 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
 <footer>
   <div class="wrap">
     <div class="foot">
-      <a class="brand brand-foot" href="#top" aria-label="Stepovyk – на початок"><img src="assets/logo.svg?v=143729be" alt="Stepovyk" width="90" height="30" loading="lazy"></a>
+      <a class="brand brand-foot" href="#top" aria-label="Stepovyk – на початок"><img src="assets/logo.svg?v=4d06c309" alt="Stepovyk" width="96" height="32" loading="lazy"></a>
       <nav aria-label="Посилання">
         <a href="https://t.me/stepovyk_ua">Telegram</a>
         <a href="https://github.com/stepovyk">GitHub</a>
