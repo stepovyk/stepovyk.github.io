@@ -1,0 +1,109 @@
+/* Сторінки застосунків, політики й форми – стримано, як самі застосунки: тепла нейтральна основа, акцент продукту,
+   спокійні форми з дизайн-системи застосунків. Мазки й степ лишаються на головній. */
+@font-face{font-family:"Fixel Display";src:url(fonts/FixelDisplay-Bold.woff2) format("woff2");font-weight:700;font-display:swap;ascent-override:95%;descent-override:25%;line-gap-override:0%}
+
+.quiet{
+  --bg:#100f0e;--surface:#1d1c1b;--fill:#2c2b2a;--fill-hi:#343332;--line:#302f2d;
+  --ink:#f1f0ee;--soft:#dcd9d5;--muted:#bfbcb9;--faint:#9b9995;
+  --ghost:var(--fill);--ghost-hi:var(--fill-hi);
+  --accent:#2a5cad;--accent-hi:#2052a1;--accent-soft:#172946;--accent-text:#649af0;--accent-line:#3e72c4;
+  --wheat:var(--accent);--on-wheat:#fff;--focus:var(--accent-text);--land:none;
+  background:var(--bg)
+}
+.quiet.kopiyka{--accent:#197c57;--accent-hi:#03724d;--accent-soft:#123023;--accent-text:#53ad84;--accent-line:#25845e}
+.quiet.smak{--accent:#b15223;--accent-hi:#a54716;--accent-soft:#401f10;--accent-text:#e17e51;--accent-line:#b65628}
+.quiet.obrii{--accent:#6349cb;--accent-hi:#5a3ebf;--accent-soft:#27224c;--accent-text:#978afa;--accent-line:#735ddf}
+@media (prefers-color-scheme:light){
+  .quiet{--bg:#f6f4f0;--surface:#fff;--fill:#eeece8;--fill-hi:#e6e4e0;--line:#e2e0dd;
+    --ink:#1b1917;--soft:#3d3a36;--muted:#68645e;--faint:#6e6a64;
+    --accent-soft:#e3eeff;--accent-text:#3163b5;--accent-line:#5387dc}
+  .quiet.kopiyka{--accent-soft:#dff2e8;--accent-text:#0a7450;--accent-line:#3d9770}
+  .quiet.smak{--accent-soft:#ffe7dd;--accent-text:#a64817;--accent-line:#cd6b3f}
+  .quiet.obrii{--accent-soft:#ebebff;--accent-text:#6555bf;--accent-line:#8873f8}
+}
+.quiet ::selection{background:var(--accent-soft);color:var(--ink)}
+
+/* шапка й навігація: без мазків, поточний розділ – кольором */
+.quiet header{background:color-mix(in srgb,var(--bg) 88%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.quiet .nav a:not(.btn)::after,.quiet .tabs a::after{content:none}
+.quiet .nav a.on{color:var(--ink)}
+
+/* кнопки: пігулка з акцентом продукту; під курсором лише темнішає */
+.quiet .btn{min-height:52px;padding:0 24px;font:500 17px/1 var(--body);color:#fff;--paint:var(--accent)}
+.quiet .btn::before{-webkit-mask:none;mask:none;border-radius:999px;transition:background .15s,transform .15s}
+.quiet .btn:hover{--paint:var(--accent-hi)}
+.quiet .btn:hover::before,.quiet .btn:focus-visible::before{transform:none}
+.quiet .btn:active::before{transform:scale(.97)}
+.quiet .btn .i{width:20px;height:20px}
+.quiet .btn-g{color:var(--ink);--paint:var(--fill)}
+.quiet .btn-g:hover{--paint:var(--fill-hi)}
+.quiet .tg{--paint:var(--tg)}
+.quiet .tg:hover{--paint:#176ea6}
+.quiet .nav .btn{min-height:44px;padding:0 18px;font-size:15px}
+.quiet :focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:10px}
+.quiet .btn:focus-visible{border-radius:999px}
+.quiet .toast{color:var(--bg);--paint:var(--ink)}
+.quiet .toast::before{-webkit-mask:none;mask:none;border-radius:999px}
+
+/* заголовки: звичайний регістр, спокійна вага */
+.quiet h1,.quiet .page h1{font:700 clamp(36px,5.4vw,56px)/1.05 var(--head);text-transform:none;letter-spacing:-.02em;margin:0 0 16px}
+.quiet h2,.quiet .prose h2{font:700 clamp(28px,3.4vw,38px)/1.12 var(--head);text-transform:none;letter-spacing:-.015em;margin:0 0 14px}
+.quiet h3,.quiet .card h3{font:700 20px/1.25 var(--head);letter-spacing:-.005em}
+.quiet .prose h2{font-size:clamp(23px,2.6vw,27px);margin:40px 0 12px}
+.quiet .prose h3{font-size:19px}
+.quiet .kicker{color:var(--accent-text);letter-spacing:.06em;font-size:13px}
+.quiet .lead{color:var(--soft);font-size:clamp(18px,2vw,20px)}
+.quiet .app-hero .icon{border-radius:22%}
+
+/* вкладки розділу: м'яка пігулка під поточною */
+.quiet .tabs>div{gap:4px;margin:0}
+.quiet .tabs a{padding:12px 16px;border-radius:999px;transition:background .15s,color .15s}
+.quiet .tabs a:hover{background:var(--fill)}
+.quiet .tabs a[aria-current]{background:var(--fill);color:var(--ink)}
+
+/* картки й панелі */
+.quiet .grid{gap:12px}
+.quiet .card{background:var(--surface);border-radius:20px;padding:24px}
+.quiet .card p{margin:0}
+.quiet .pro,.quiet .notify-card{background:var(--surface);border-radius:28px;padding:clamp(24px,4vw,48px)}
+.quiet .page section{padding:clamp(28px,5vw,56px) 0}
+.quiet .price-sum{font:700 clamp(36px,5vw,48px)/1 var(--head);letter-spacing:-.02em}
+.quiet .price-best .price-sum{color:var(--accent-text);background:none;-webkit-background-clip:border-box;background-clip:border-box}
+.quiet .price-note{color:var(--accent-text)}
+.quiet .ticks li::marker,.quiet .prose li::marker{color:var(--accent-text)}
+
+/* кроки: номер у м'якому колі */
+.quiet .steps li{padding-left:48px;min-height:32px}
+.quiet .steps li::before{top:-2px;width:32px;height:32px;display:grid;place-items:center;border-radius:50%;background:var(--accent-soft);color:var(--accent-text);font:700 16px/1 var(--head)}
+
+/* запитання: тонкий поділ між пунктами, як у списках застосунків */
+.quiet .faq details{padding:16px 0;border-top:1px solid var(--line)}
+.quiet .faq details:last-of-type{border-bottom:1px solid var(--line)}
+.quiet .faq summary{font-size:18px}
+.quiet .faq summary::after{font:400 24px/1 var(--body);color:var(--accent-text)}
+
+/* посилання в тексті */
+.quiet .dl-hint a,.quiet .prose a,.quiet .fine a,.quiet .note a,.quiet .muted a,.quiet .mail a,.quiet .faq a{text-decoration-color:var(--accent-line);text-decoration-thickness:1px}
+.quiet .toc a[aria-current],.quiet .toc a:hover{color:var(--accent-text)}
+
+/* форми */
+.quiet .form input[type=email],.quiet .form input[type=text],.quiet .form textarea{background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);border-radius:16px;transition:box-shadow .15s}
+.quiet .form input:hover,.quiet .form textarea:hover{box-shadow:inset 0 0 0 1px var(--faint)}
+.quiet .form input:focus-visible,.quiet .form textarea:focus-visible{outline:none;box-shadow:inset 0 0 0 2px var(--accent-text)}
+.quiet .notify-card .form input[type=email],.quiet .notify-card .form textarea{background:var(--bg)}
+.quiet input[type=radio],.quiet input[type=checkbox]{accent-color:var(--accent)}
+
+/* знімки й позначка «готово» */
+.quiet .shots img{border-radius:16px}
+.quiet .done{width:72px;height:72px;margin:0 auto 24px;display:grid;place-items:center;border-radius:50%;background:var(--accent-soft);color:var(--accent-text)}
+.quiet .done .i{width:34px;height:34px}
+
+@media (prefers-reduced-motion:no-preference){
+  .quiet .btn:hover::before,.quiet .btn:focus-visible::before{transform:none}
+  .quiet .btn:active::before{transform:scale(.97)}
+}
+
+/* шість можливостей – рівними рядами по три */
+@media (min-width:640px){.quiet .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:960px){.quiet .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.quiet .page{min-height:calc(100vh - 260px)}
