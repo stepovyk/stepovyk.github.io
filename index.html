@@ -42,6 +42,7 @@
   --sky:#0a84d6;--wheat:#f5b21e;--on-wheat:#12161e;--dot-yellow:#ffd500;
   --tg:#1a7cba;--nexus:#d98f40;--privat:#2fab33;
   --head:"Fixel Display",system-ui,sans-serif;--body:"Fixel Text",system-ui,sans-serif;
+  --land:url(assets/steppe-type.webp?v=1627ea1b);
   --gut:16px;
 }
 @media (prefers-color-scheme:light){:root{
@@ -49,6 +50,7 @@
   --ghost:rgb(18 22 30 / .07);--ghost-hi:rgb(18 22 30 / .12);
   --glow-sky:rgb(10 132 214 / .16);--glow-wheat:rgb(245 178 30 / .16);
   --mono:#111214;--on-mono:#fff;--dot-yellow:#f5b21e;
+  --land:url(assets/steppe-type-deep.webp?v=7b580e81);
 }}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -111,9 +113,9 @@ h1>span{display:block}
 
 /* розділи */
 section{padding:clamp(44px,7vw,80px) 0}
-h2{font:800 clamp(38px,6vw,58px)/1.02 var(--head);margin:0 0 16px;text-transform:uppercase;letter-spacing:-.01em}
-h2::after{content:"";display:block;width:min(220px,2.6em);height:16px;margin-top:14px;background:var(--wheat);-webkit-mask:url(assets/brush-line.svg?v=4219aa5f) center/100% 100% no-repeat;mask:url(assets/brush-line.svg?v=4219aa5f) center/100% 100% no-repeat;clip-path:inset(0 100% 0 0);transition:clip-path .9s cubic-bezier(.6,0,.2,1) .2s}
-h2.in::after{clip-path:inset(0 0 0 0)}
+h2{font:800 clamp(38px,6vw,58px)/1.02 var(--head);margin:0 0 18px;text-transform:uppercase;letter-spacing:-.01em}
+/* заголовки – як підпис Stepovyk: крізь літери видно степ під небом, обрій посередині кожного рядка */
+.land{background:var(--land) center/100% 100% no-repeat;color:transparent;-webkit-background-clip:text;background-clip:text;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .sub{color:var(--muted);margin:0 0 40px;font-size:18px;max-width:58ch;text-wrap:pretty}
 h3{font:800 clamp(26px,3.2vw,32px)/1.08 var(--head);margin:0;text-wrap:balance}
 
@@ -166,7 +168,7 @@ footer{padding:24px 0 56px;color:var(--muted);font-size:15px}
 .rise.in{opacity:1;transform:none}
 .toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);color:var(--bg);font:500 16px/1 var(--body);padding:18px 30px;opacity:0;pointer-events:none;transition:.25s;z-index:20;--paint:var(--ink)}
 .toast.on{opacity:1;transform:translate(-50%,0)}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rise{opacity:1;transform:none}.mark .stroke{stroke-dashoffset:0}h2::after,.field{clip-path:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rise{opacity:1;transform:none}.mark .stroke{stroke-dashoffset:0}.field{clip-path:none}}
 </style>
 </head>
 <body>
@@ -219,7 +221,7 @@ footer{padding:24px 0 56px;color:var(--muted);font-size:15px}
 
   <section id="games">
     <div class="wrap">
-      <h2 class="rise">Уже українською</h2>
+      <h2 class="rise"><span class="land">Уже українською</span></h2>
       <p class="sub rise">Перекладено весь текст гри. Англійську можна повернути будь-коли.</p>
       <div class="games">
         <!-- ігри: з games.json, пише sync.py -->
@@ -268,7 +270,7 @@ footer{padding:24px 0 56px;color:var(--muted);font-size:15px}
 
   <section id="next">
     <div class="wrap">
-      <h2 class="rise">Далі в роботі</h2>
+      <h2 class="rise"><span class="land">Далі в роботі</span></h2>
       <p class="sub rise">Переклади виходять по черзі. Новини й голосування – у Telegram.</p>
       <div class="next">
         <div class="plan rise">
@@ -302,7 +304,7 @@ footer{padding:24px 0 56px;color:var(--muted);font-size:15px}
   <section id="support">
     <div class="wrap">
       <div class="field rise" aria-hidden="true"><img src="assets/steppe-800.webp?v=0536205c" srcset="assets/steppe-800.webp?v=0536205c 800w, assets/steppe-1600.webp?v=ecb20820 1600w" sizes="(max-width:1152px) 100vw, 1120px" alt="" width="1600" height="679" loading="lazy"></div>
-      <h2 class="rise">Підтримати</h2>
+      <h2 class="rise"><span class="land">Підтримати</span></h2>
       <p class="sub rise">Усі переклади безкоштовні й такими лишаться. Кожна гривня наближає наступну гру.</p>
       <div class="btns donate rise">
         <a class="btn mono" href="https://send.monobank.ua/jar/8aeC9dGFrn" aria-label="Банка monobank"><svg class="i" aria-hidden="true"><use href="#i-mono"/></svg></a>
