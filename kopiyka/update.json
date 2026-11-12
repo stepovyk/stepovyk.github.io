@@ -1,0 +1,10 @@
+{
+ "versionCode": 23,
+ "versionName": "1.1.0",
+ "url": "https://stepovyk.github.io/kopiyka/download/kopiyka-1.1.0.apk",
+ "sha256": "a2b5f7a2522c98312b3dbc3d4829e85e7359b963ca632c6a1ed8131cf8b950af",
+ "size": 5645898,
+ "minSdk": 26,
+ "notesUk": "Копійка 1.1.0 — спільний бюджет для ваших телефонів і родини з наскрізним шифруванням, автозапис оплат зі сповіщень банків і помічник у кожному розділі.",
+ "notesEn": "Kopiyka 1.1.0 — a shared, end-to-end encrypted budget for your phones and family, automatic records from bank notifications and the assistant in every section."
+}

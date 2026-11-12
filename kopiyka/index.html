@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Копійка – облік витрат і бюджет для Android · Stepovyk</title>
+<meta name="description" content="Копійка – облік витрат і бюджет для Android: швидкий запис витрат, бюджети, цілі, регулярні платежі, рахунки в різних валютах, спільний бюджет для родини з наскрізним шифруванням. Без реклами, дані – тільки на телефоні.">
+<link rel="canonical" href="https://stepovyk.github.io/kopiyka/">
+<link rel="alternate" hreflang="uk" href="https://stepovyk.github.io/kopiyka/">
+<link rel="alternate" hreflang="en" href="https://stepovyk.github.io/en/kopiyka/">
+<link rel="alternate" hreflang="x-default" href="https://stepovyk.github.io/kopiyka/">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0b0f17" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f4ee" media="(prefers-color-scheme: light)">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:site_name" content="Stepovyk">
+<meta property="og:title" content="Копійка – облік витрат і бюджет для Android · Stepovyk">
+<meta property="og:description" content="Копійка – облік витрат і бюджет для Android: швидкий запис витрат, бюджети, цілі, регулярні платежі, рахунки в різних валютах, спільний бюджет для родини з наскрізним шифруванням. Без реклами, дані – тільки на телефоні.">
+<meta property="og:url" content="https://stepovyk.github.io/kopiyka/">
+<meta property="og:image" content="https://stepovyk.github.io/kopiyka/og.png?v=d6140515">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/icon.svg?v=ae4cfeea" type="image/svg+xml">
+<link rel="icon" href="/favicon.png?v=f440e631" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=5f3677f6">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/assets/fonts/FixelDisplay-ExtraBold.woff2?v=1a6a3d1e" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/FixelText-Regular.woff2?v=93bbd464" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css?v=3700a5ac">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Копійка","operatingSystem":"Android 8.0+","applicationCategory":"FinanceApplication","inLanguage":["uk","en"],"url":"https://stepovyk.github.io/kopiyka/","image":"https://stepovyk.github.io/kopiyka/icon-240.png?v=3a8ff1d7","author":{"@type":"Person","name":"Stepovyk","url":"https://stepovyk.github.io/"},"offers":{"@type":"Offer","price":"0","priceCurrency":"UAH"},"downloadUrl":"https://stepovyk.github.io/kopiyka/download/kopiyka-1.1.0.apk","softwareVersion":"1.1.0"}</script>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Stepovyk – на головну"><img src="/assets/logo.svg?v=0caa4199" alt="Stepovyk" width="108" height="36"></a>
+    <nav class="nav" aria-label="Розділи">
+      <a class="opt" href="/#games">Ігри</a>
+      <a class="opt on" href="/#apps" aria-current="true">Застосунки</a>
+      <a href="/en/kopiyka/" hreflang="en" lang="en" aria-label="English">EN</a>
+      <a class="btn tg" href="https://t.me/stepovyk_ua"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>Telegram</a>
+    </nav>
+  </div>
+</header>
+<main id="top" class="page app-kopiyka">
+<nav class="tabs" aria-label="Розділи Копійки">
+  <div>
+    <a href="/kopiyka/" aria-current="page">Огляд</a>
+    <a href="/kopiyka/changelog/">Що нового</a>
+    <a href="/kopiyka/privacy/">Конфіденційність</a>
+  </div>
+</nav>
+  <div class="top wrap">
+<div class="app-hero app-hero-mascot">
+  <img class="icon" src="/kopiyka/icon-240.png?v=3a8ff1d7" width="120" height="120" alt="" fetchpriority="high">
+  <div>
+    <h1>Копійка</h1>
+    <p class="app-sub">Облік витрат і бюджет для Android</p>
+  </div>
+  <img class="mascot" src="/kopiyka/mascot.png?v=75a9db3d" width="180" height="180" alt="Копійчик – маскот застосунку «Копійка»">
+</div>
+<p class="lead lead-left">Витрати за секунди, бюджет під контролем, гроші на мрії. Без реклами – фінанси лише на телефоні.</p>
+<ul class="chips"><li>Безкоштовно</li><li>Без реклами</li><li>Android 8.0+</li></ul>
+<div class="actions actions-start">
+  <a class="btn" href="/kopiyka/download/kopiyka-1.1.0.apk" download><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="M7.5 10.5L12 15l4.5-4.5"/><path d="M5 19.5h14"/></svg>Завантажити APK</a>
+<span class="soon"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.6 2.9a1.3 1.3 0 0 0-.6 1.1v16c0 .45.23.86.6 1.1l9.1-9.1zM15.1 13.4l-9 9.1 11.2-6.4zM17.3 8.1L6.1 1.7l9 9zM18.6 8.9l2.4 1.4c.95.54.95 1.9 0 2.45l-2.4 1.36-2.6-2.6z"/></svg>Незабаром у Google Play</span>
+
+</div>
+<p class="dl-hint">Android 8.0+ · версія 1.1.0 · 5,6 МБ · оновлюється сама · <a href="/kopiyka/changelog/">що нового</a></p>
+  </div>
+
+<section aria-labelledby="feat-title">
+  <div class="wrap sheet">
+    <div class="section-head">
+      <p class="kicker">Безкоштовно</p>
+      <h2 id="feat-title"><span class="land">Усе, щоб гроші не розбігалися</span></h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card rise"><h3>Запис за секунди</h3><p>Калькулятор, розумні категорії й шаблони частих витрат.</p></div>
+      <div class="card rise"><h3>Рахунки й валюти</h3><p>Картки, готівка й заощадження в будь-якій валюті за курсом НБУ.</p></div>
+      <div class="card rise"><h3>Бюджети з підказкою</h3><p>Скільки можна витратити сьогодні, а залишок – на наступний місяць.</p></div>
+      <div class="card rise"><h3>Цілі й платежі</h3><p>Накопичення, підписки, оренда й борги з нагадуваннями.</p></div>
+      <div class="card rise"><h3>Зрозуміла аналітика</h3><p>Підсумки тижня, місяця й року та віджет на головний екран.</p></div>
+      <div class="card rise"><h3>Під замком</h3><p>Відбиток пальця, приховані суми, резервні копії й експорт у CSV.</p></div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="pro-title">
+  <div class="wrap sheet pro pro-product rise">
+    <p class="kicker">Копійка Pro</p>
+    <h2 id="pro-title"><span class="land">Більше автоматики – менше рутини</span></h2>
+    <ul class="ticks">
+      <li><strong>Спільний бюджет</strong> із наскрізним шифруванням – для ваших телефонів і родини</li>
+      <li><strong>Автозапис із банків</strong> – оплати записуються самі зі сповіщень</li>
+      <li><strong>Автоімпорт з monobank</strong> – операції й баланси карток</li>
+      <li><strong>Скан чеків</strong> – фото стає готовою операцією</li>
+      <li><strong>Швидке введення з ШІ</strong>: «кава 65, таксі 180» – і записано</li>
+      <li><strong>ШІ-помічник</strong> у кожному розділі: пояснить витрати й виконає дії за вас</li>
+      <li>Без обмежень на рахунки, бюджети, цілі й регулярні платежі, тренди за 12 місяців</li>
+    </ul>
+    <div class="prices">
+      <div class="price"><span class="price-sum">79 ₴</span><span class="price-term">на місяць</span></div>
+      <div class="price price-best"><span class="price-sum">449 ₴</span><span class="price-term">на рік</span><span class="price-note">7 днів безкоштовно</span></div>
+    </div>
+    <p class="fine">Підписка через Google Play, скасувати можна будь-коли. Пробний тиждень – для нових підписників річної підписки. Приєднатися до спільного бюджету за запрошенням можна безкоштовно.</p>
+  </div>
+</section>
+
+<section aria-labelledby="install-title">
+  <div class="narrow sheet">
+    <h2 id="install-title" class="gap-below-sm"><span class="land">Як встановити</span></h2>
+    <ol class="steps">
+      <li><strong>Завантажте APK</strong> кнопкою вгорі – це офіційна збірка Stepovyk.</li>
+      <li><strong>Відкрийте файл</strong> і, якщо Android попросить, дозвольте браузеру встановлювати застосунки.</li>
+      <li><strong>Готово.</strong> Про нові версії Копійка повідомить сама.</li>
+    </ol>
+    <p class="checksum">SHA-256 версії 1.1.0: <code>a2b5f7a2522c98312b3dbc3d4829e85e7359b963ca632c6a1ed8131cf8b950af</code></p>
+  </div>
+</section>
+
+<section aria-labelledby="faq-title">
+  <div class="narrow sheet faq">
+    <h2 id="faq-title" class="gap-below-sm"><span class="land">Запитання й відповіді</span></h2>
+    <details><summary>Чи потрібен обліковий запис?</summary><p>Ні. Рахунки, операції, бюджети й цілі зберігаються лише на вашому телефоні.</p></details>
+    <details><summary>Хто бачить мої фінанси?</summary><p>Тільки ви: я не маю доступу до ваших даних, а реклами, аналітики й трекерів немає. У спільному бюджеті записи шифруються на телефоні ще до надсилання, і прочитати їх можуть лише пристрої вашого простору.</p></details>
+    <details><summary>Як працює спільний бюджет?</summary><p>Створіть простір із Pro й запросіть інший телефон посиланням – записи з’являться на кожному пристрої за кілька секунд, а приєднатися можна безкоштовно. Ключ шифрування є лише в запрошенні чи ключі відновлення й не потрапляє на мій сервер.</p></details>
+    <details><summary>Як працює автозапис із банків?</summary><p>Це функція Pro: надайте Копійці доступ до сповіщень і оберіть банки. Застосунок читає лише їхні сповіщення – суму, магазин і останні цифри картки – й обробляє їх тільки на телефоні.</p></details>
+    <details><summary>Як підключити monobank?</summary><p>Автоімпорт входить у Pro: отримайте персональний токен на api.monobank.ua і додайте його в Копійці. Токен дає доступ лише на читання, зберігається зашифрованим тільки на телефоні, надсилається лише до monobank, і відкликати його можна будь-коли.</p></details>
+    <details><summary>Як працюють ШІ-функції?</summary><p>Вони працюють, лише коли ви їх запускаєте: до Google Gemini через мій сервер-посередник іде тільки потрібне для запиту, а зміст запитів і фото посередник не зберігає. Голос розпізнає система телефону, а історія розмови зберігається лише на телефоні.</p></details>
+    <details><summary>Чи можна імпортувати виписку з банку?</summary><p>Так, з CSV та Excel (.xlsx). Файли обробляються лише на телефоні.</p></details>
+    <details><summary>Звідки курси валют?</summary><p>З відкритого API Національного банку України – без передачі ваших даних.</p></details>
+    <details><summary>Як перенести дані на новий телефон?</summary><p>Резервною копією або спільним бюджетом. Токен monobank з міркувань безпеки не переноситься – додайте його знову.</p></details>
+    <details><summary>Як видалити всі дані?</summary><p>«Налаштування → Видалити всі дані» або видалення застосунку; телефон у спільному просторі спершу виходить із нього, а коли простір залишає останній пристрій, сервер видаляє всі його записи. Можна й написати мені – я видалю простір за його ідентифікатором.</p></details>
+  </div>
+</section>
+
+<section class="about center" aria-labelledby="help-title">
+  <div class="narrow sheet">
+    <h2 id="help-title"><span class="land">Є ідея чи питання?</span></h2>
+    <p class="lead">Я читаю кожне повідомлення.</p>
+    <div class="actions"><a class="btn" href="/contact/"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg>Написати мені</a><a class="btn btn-g" href="/kopiyka/privacy/">Конфіденційність</a></div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="brand brand-foot" href="/" aria-label="Stepovyk – на головну"><img src="/assets/logo.svg?v=0caa4199" alt="Stepovyk" width="96" height="32" loading="lazy"></a>
+      <nav aria-label="Посилання">
+        <a href="/contact/">Написати мені</a>
+        <a href="/privacy/">Конфіденційність</a>
+        <a href="https://t.me/stepovyk_ua">Telegram</a>
+        <a href="https://github.com/stepovyk">GitHub</a>
+      </nav>
+    </div>
+    <p class="legal">Google Play і логотип Google Play є товарними знаками Google LLC.</p>
+  </div>
+</footer>
+<script src="/assets/site.js?v=29509e85"></script>
+</body>
+</html>
