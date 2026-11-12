@@ -7,6 +7,7 @@
 <meta name="description" content="Безкоштовні українізатори ігор від Stepovyk: Call of Duty: World at War, Mount &amp; Blade II: Bannerlord і RimWorld. Повний переклад, нові шрифти, встановлення за хвилину. Далі – уся серія Call of Duty і дубляж Bannerlord.">
 <link rel="canonical" href="https://stepovyk.github.io/">
 <meta name="theme-color" content="#0b0f17">
+<link rel="preload" href="assets/mark.webp?v=ee1c2dbb" as="image" type="image/webp">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="uk_UA">
@@ -14,28 +15,28 @@
 <meta property="og:title" content="Ігри українською – українізатори від Stepovyk">
 <meta property="og:description" content="Безкоштовні повні українські локалізації: Call of Duty: World at War, Mount &amp; Blade II: Bannerlord і RimWorld. Далі – уся серія Call of Duty.">
 <meta property="og:url" content="https://stepovyk.github.io/">
-<meta property="og:image" content="https://stepovyk.github.io/assets/og.png?v=796b2ee3">
+<meta property="og:image" content="https://stepovyk.github.io/assets/og.png?v=83cd9009">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="assets/icon.svg?v=a14110bd" type="image/svg+xml">
-<link rel="icon" href="favicon.png?v=6b04ccf6" type="image/png" sizes="64x64">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2267c25b">
+<link rel="icon" href="assets/icon.svg?v=07522242" type="image/svg+xml">
+<link rel="icon" href="favicon.png?v=394325da" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2431407e">
 <link rel="manifest" href="site.webmanifest">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Ігри українською","url":"https://stepovyk.github.io/","inLanguage":"uk"},{"@type":"Person","name":"Stepovyk","url":"https://stepovyk.github.io/","image":"https://stepovyk.github.io/assets/avatar-512.png","sameAs":["https://t.me/stepovyk_ua","https://github.com/stepovyk","https://www.nexusmods.com/users/174402135"]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@600;700&family=Fira+Sans:wght@400;500&family=Kaushan+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@600;700&family=Fira+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#0b0f17;--surface:#131a26;--surface-2:#1a2332;--line:#243044;
-  --text:#eef2f8;--muted:#a3aec0;--blue:#0057b8;--blue-hi:#2f7ee0;--yellow:#ffd500;
+  --text:#eef2f8;--muted:#a3aec0;--blue:#0b6bc4;--blue-hi:#1d82df;--yellow:#f5b21e;--sky:#0a84d6;
   --r:20px;--gut:16px;--pad:clamp(22px,2.4vw,28px);
   --head:"Fira Sans Condensed",system-ui,sans-serif;--body:"Fira Sans",system-ui,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:radial-gradient(900px 420px at 12% 0,rgb(0 87 184 / .26),transparent 70%),radial-gradient(700px 360px at 92% 0,rgb(255 213 0 / .08),transparent 70%) no-repeat,var(--bg);color:var(--text);font:400 17px/1.55 var(--body);overflow-x:hidden}
+body{margin:0;background:radial-gradient(900px 480px at 85% 0,rgb(10 132 214 / .30),transparent 70%),radial-gradient(800px 420px at 70% 640px,rgb(245 178 30 / .12),transparent 70%) no-repeat,var(--bg);color:var(--text);font:400 17px/1.55 var(--body);overflow-x:hidden}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 .wrap{width:min(1120px,100% - 2*var(--gut));margin-inline:auto}
@@ -44,8 +45,8 @@ a{color:inherit}
 /* шапка */
 header{position:sticky;top:0;z-index:10;background:rgb(11 15 23 / .82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgb(255 255 255 / .06)}
 .bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
-.brand{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;font:400 31px/1 "Kaushan Script",var(--head);color:var(--text)}
-.brand .s{background:linear-gradient(var(--blue) 50%,var(--yellow) 50%);-webkit-background-clip:text;background-clip:text;color:transparent;padding:.08em 0}
+.brand{display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
+.brand img{height:34px;width:auto}
 .nav{display:flex;gap:6px;align-items:center}
 .nav a{text-decoration:none;color:var(--muted);font:500 15px/1 var(--body);padding:14px 12px;border-radius:999px;transition:color .2s,background .2s}
 .nav a:hover{color:var(--text);background:var(--surface)}
@@ -58,7 +59,7 @@ header{position:sticky;top:0;z-index:10;background:rgb(11 15 23 / .82);backdrop-
 .btn:active{transform:scale(.97)}
 .btn svg{width:20px;height:20px;flex:none}
 .btn-y{background:var(--yellow);color:#14161a}
-.btn-y:hover{box-shadow:0 8px 28px rgb(255 213 0 / .28)}
+.btn-y:hover{box-shadow:0 8px 28px rgb(245 178 30 / .32)}
 .btn-b{background:var(--blue);color:#fff}
 .btn-b:hover{background:var(--blue-hi)}
 .btn-g{background:var(--surface-2);color:var(--text);box-shadow:inset 0 0 0 1px var(--line)}
@@ -68,10 +69,11 @@ header{position:sticky;top:0;z-index:10;background:rgb(11 15 23 / .82);backdrop-
 /* перший екран */
 .hero{padding:clamp(48px,8vw,104px) 0 clamp(16px,3vw,32px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,56px);align-items:center}
 @media (max-width:900px){.hero{grid-template-columns:1fr}}
-.hero-art{--m:linear-gradient(90deg,transparent,#000 18%,#000 86%,transparent),linear-gradient(transparent,#000 20%,#000 76%,transparent);margin:0 calc(-1 * var(--gut));aspect-ratio:5/4;-webkit-mask:var(--m);-webkit-mask-composite:source-in;mask:var(--m);mask-composite:intersect}
-.hero-art img{width:100%;height:100%;object-fit:cover}
-@media (min-width:600px){.hero-art{width:min(600px,100%);margin:0 auto}}
-@media (min-width:901px){.hero-art{width:auto;margin:0}}
+.hero-art{display:flex;justify-content:center}
+.mark{display:block;width:auto;height:clamp(300px,52vw,560px);max-width:100%;filter:drop-shadow(0 24px 60px rgb(10 132 214 / .25))}
+.mark .stroke{stroke-dasharray:1 1;stroke-dashoffset:1;animation:paint 1.7s cubic-bezier(.55,0,.2,1) .25s forwards}
+@keyframes paint{to{stroke-dashoffset:0}}
+@media (max-width:900px){.hero-art{order:-1}.mark{height:clamp(260px,70vw,400px)}}
 .hero-text{min-width:0}
 h1{font:700 clamp(46px,12vw,112px)/.92 var(--head);margin:0 0 28px;text-transform:uppercase;letter-spacing:-.01em}
 h1 span{display:block;color:var(--yellow)}
@@ -106,8 +108,8 @@ h3{font:700 clamp(26px,3.4vw,32px)/1.05 var(--head);margin:0;text-wrap:balance}
 .next{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px}
 .card{border-radius:var(--r);padding:var(--pad);background:linear-gradient(160deg,var(--surface-2),var(--surface));box-shadow:inset 0 0 0 1px var(--line);display:flex;flex-direction:column;gap:14px}
 .tag{align-self:flex-start;font:600 14px/1 var(--head);text-transform:uppercase;letter-spacing:.05em;color:var(--yellow);display:flex;align-items:center;gap:8px}
-.tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 0 rgb(255 213 0 / .6);animation:pulse 2s infinite}
-@keyframes pulse{70%{box-shadow:0 0 0 8px rgb(255 213 0 / 0)}100%{box-shadow:0 0 0 0 rgb(255 213 0 / 0)}}
+.tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 0 rgb(245 178 30 / .6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgb(245 178 30 / 0)}100%{box-shadow:0 0 0 0 rgb(245 178 30 / 0)}}
 .card p{margin:0;color:var(--muted)}
 .card .btns{margin-top:auto}
 
@@ -118,7 +120,7 @@ h3{font:700 clamp(26px,3.4vw,32px)/1.05 var(--head);margin:0;text-wrap:balance}
 .steppe p{margin:0;color:var(--muted);max-width:56ch;text-wrap:pretty}
 
 /* підтримка */
-.support{border-radius:28px;padding:calc(var(--pad) * 2);background:linear-gradient(135deg,#0a3f84,var(--blue) 60%,#0b4a9a)}
+.support{border-radius:28px;padding:calc(var(--pad) * 2);background:linear-gradient(135deg,#08508f,var(--blue) 55%,#0a84d6)}
 .support h2{color:#fff}
 .support .sub{color:#d7e5ff}
 .support .note{margin:22px 0 0;color:#d7e5ff;font-size:16px}
@@ -129,13 +131,13 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
 .foot nav{display:flex;flex-wrap:wrap;gap:0 8px;margin:0 -10px}
 .foot nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 10px}
 .foot a{text-decoration:none}.foot a:hover{color:var(--text)}
-.brand-foot{font-size:26px}
+.brand-foot img{height:30px}
 .legal{margin:16px 0 0;font-size:14px;color:#7d889b}
 
 /* поява */
 .rise{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
 .rise.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rise{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rise{opacity:1;transform:none}.mark .stroke{stroke-dashoffset:0}}
 .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--text);color:var(--bg);font:500 16px/1 var(--body);padding:14px 20px;border-radius:999px;opacity:0;pointer-events:none;transition:.25s;z-index:20}
 .toast.on{opacity:1;transform:translate(-50%,0)}
 </style>
@@ -143,7 +145,7 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
 <body>
 <header>
   <div class="wrap bar">
-    <a class="brand" href="#top" aria-label="Ігри українською – на початок"><span class="s">S</span>tepovyk</a>
+    <a class="brand" href="#top" aria-label="Stepovyk – на початок"><img src="assets/logo.svg?v=143729be" alt="Stepovyk" width="102" height="34"></a>
     <nav class="nav" aria-label="Розділи">
       <a class="opt" href="#games">Переклади</a>
       <a class="opt" href="#next">У роботі</a>
@@ -166,8 +168,17 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
       </button>
     </div>
     </div>
-    <div class="hero-art" aria-hidden="true">
-      <img src="assets/art-hero-640.jpg" srcset="assets/art-hero-640.jpg 640w, assets/art-hero.jpg 1200w" sizes="(max-width:900px) 100vw, 560px" alt="" width="1200" height="960" fetchpriority="high">
+    <div class="hero-art">
+      <!-- знак: з mark.py, пише sync.py -->
+<svg class="mark" viewBox="0 0 1237 1567" role="img" aria-label="Stepovyk">
+  <defs>
+    <mask id="brush" maskUnits="userSpaceOnUse" x="0" y="0" width="1237" height="1567">
+      <path class="stroke" d="M1309,442 L1032,318 L1016,306 L999,290 L982,273 L965,257 L948,245 L931,240 L914,238 L897,235 L880,233 L863,229 L846,226 L829,222 L812,218 L795,214 L778,209 L761,203 L744,197 L727,193 L710,192 L693,193 L676,198 L659,203 L642,208 L625,211 L608,214 L591,217 L574,221 L557,224 L540,227 L523,230 L506,233 L489,237 L472,241 L455,246 L438,251 L421,258 L404,265 L387,274 L370,284 L353,296 L337,310 L323,326 L313,343 L306,360 L301,377 L295,394 L290,411 L285,428 L281,445 L276,462 L273,479 L274,496 L278,513 L282,530 L287,547 L292,564 L298,581 L304,598 L310,615 L317,632 L328,649 L343,664 L360,676 L377,686 L394,694 L411,701 L428,708 L445,715 L462,721 L479,726 L496,732 L513,737 L530,742 L547,747 L564,752 L581,756 L598,761 L615,765 L632,769 L649,773 L666,777 L683,782 L700,787 L717,791 L734,796 L751,801 L768,807 L785,812 L802,818 L819,824 L836,831 L853,838 L870,846 L887,854 L904,864 L921,877 L936,892 L947,909 L954,926 L961,943 L967,960 L972,977 L978,994 L983,1011 L988,1028 L992,1045 L994,1062 L992,1079 L987,1096 L982,1113 L977,1130 L972,1147 L967,1164 L961,1181 L955,1198 L947,1215 L934,1231 L918,1246 L901,1259 L884,1270 L867,1279 L850,1287 L833,1294 L816,1300 L799,1305 L782,1309 L765,1313 L748,1316 L731,1319 L714,1322 L697,1324 L680,1327 L663,1329 L646,1332 L629,1334 L612,1338 L595,1341 L578,1346 L561,1351 L544,1356 L527,1356 L510,1352 L493,1345 L476,1340 L459,1336 L442,1332 L425,1328 L408,1324 L391,1320 L374,1316 L357,1312 L340,1307 L323,1302 L306,1297 L289,1288 L272,1274 L255,1257 L238,1240 L221,1223 L204,1209 L187,1199 L173,1195" pathLength="1" fill="none" stroke="#fff" stroke-width="506" stroke-linecap="round" stroke-linejoin="round"/>
+    </mask>
+  </defs>
+  <image href="assets/mark.webp?v=ee1c2dbb" width="1237" height="1567" mask="url(#brush)"/>
+</svg>
+      <!-- /знак -->
     </div>
   </div>
 
@@ -286,7 +297,7 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
 <footer>
   <div class="wrap">
     <div class="foot">
-      <a class="brand brand-foot" href="#top" aria-label="Stepovyk – на початок"><span class="s">S</span>tepovyk</a>
+      <a class="brand brand-foot" href="#top" aria-label="Stepovyk – на початок"><img src="assets/logo.svg?v=143729be" alt="Stepovyk" width="90" height="30" loading="lazy"></a>
       <nav aria-label="Посилання">
         <a href="https://t.me/stepovyk_ua">Telegram</a>
         <a href="https://github.com/stepovyk">GitHub</a>
