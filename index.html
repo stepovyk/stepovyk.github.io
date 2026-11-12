@@ -40,33 +40,32 @@
   --glow-sky:rgb(10 132 214 / .26);--glow-wheat:rgb(245 178 30 / .10);
   --mono:#f4f0e8;--on-mono:#111214;          /* GitHub і monobank: чорно-білі бренди – інверсія до тла */
   --sky:#0a84d6;--wheat:#f5b21e;--on-wheat:#12161e;--dot-yellow:#ffd500;
-  --tg:#1a7cba;--nexus:#d98f40;--privat:#2fab33;
+  --tg:#1a7cba;--on-tg:#fff;--nexus:#d98f40;--on-nexus:#12161e;--privat:#2fab33;--on-privat:#12161e;
+  --focus:#f5b21e;
   --head:"Fixel Display",system-ui,sans-serif;--body:"Fixel Text",system-ui,sans-serif;
   --land:url(assets/steppe-type.webp?v=45a9ed25);
   --gut:16px;
 }
 @media (prefers-color-scheme:light){:root{
-  --bg:#f7f4ee;--ink:#12161e;--muted:#566074;--soft:#343c4b;--faint:#6b7484;
+  --bg:#f7f4ee;--ink:#12161e;--muted:#566074;--soft:#343c4b;--faint:#646d7d;
   --ghost:rgb(18 22 30 / .07);--ghost-hi:rgb(18 22 30 / .12);
   --glow-sky:rgb(10 132 214 / .16);--glow-wheat:rgb(245 178 30 / .16);
-  --mono:#111214;--on-mono:#fff;--dot-yellow:#f5b21e;
+  --mono:#111214;--on-mono:#fff;--dot-yellow:#f5b21e;--focus:#0a84d6;
   --land:url(assets/steppe-type-deep.webp?v=c1ac41e3);
 }}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%}
 body{margin:0;background:radial-gradient(900px 520px at 88% -60px,var(--glow-sky),transparent 70%),radial-gradient(760px 420px at 70% 700px,var(--glow-wheat),transparent 70%) no-repeat,var(--bg);color:var(--ink);font:400 17px/1.6 var(--body);overflow-x:hidden}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
-::selection{background:var(--sky);color:#fff}
+::selection{background:var(--wheat);color:var(--on-wheat)}
 .wrap{width:min(1120px,100% - 2*var(--gut));margin-inline:auto}
-:focus-visible{outline:3px solid var(--wheat);outline-offset:4px;border-radius:12px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:4px;border-radius:12px}
 .sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
 /* мазок пензля: одна форма для кнопок, підкреслень, карток і смуги степу */
 .btn,.nav a,.toast{position:relative;isolation:isolate}
 .btn::before,.toast::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--paint);-webkit-mask:url(assets/brush-button.svg?v=2fb3fb62) center/100% 100% no-repeat;mask:url(assets/brush-button.svg?v=2fb3fb62) center/100% 100% no-repeat;transition:transform .3s cubic-bezier(.3,1.4,.5,1),background .2s}
-.btn:hover::before{transform:scale(1.035,1.07) rotate(-.6deg)}
-.btn:active::before{transform:scale(.97)}
 
 /* шапка: без ліній, лише плавне затемнення донизу */
 header{position:sticky;top:0;z-index:10;background:linear-gradient(var(--bg) 58%,transparent)}
@@ -75,10 +74,10 @@ header{position:sticky;top:0;z-index:10;background:linear-gradient(var(--bg) 58%
 .brand img{height:36px;width:auto}
 .nav{display:flex;gap:4px;align-items:center}
 .nav a:not(.btn){text-decoration:none;color:var(--soft);font:500 16px/1 var(--body);padding:14px 12px;transition:color .2s}
-.nav a:not(.btn):hover{color:var(--ink)}
+.nav a:not(.btn):hover,.nav a.on{color:var(--ink)}
 /* посилання в шапці: при наведенні пензель підкреслює слово */
 .nav a:not(.btn)::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:8px;background:var(--wheat);-webkit-mask:url(assets/brush-line.svg?v=4219aa5f) center/100% 100% no-repeat;mask:url(assets/brush-line.svg?v=4219aa5f) center/100% 100% no-repeat;clip-path:inset(0 100% 0 0);transition:clip-path .45s cubic-bezier(.6,0,.2,1)}
-.nav a:not(.btn):hover::after{clip-path:inset(0 0 0 0)}
+.nav a:not(.btn):hover::after,.nav a.on::after{clip-path:inset(0 0 0 0)}
 .nav .btn{min-height:48px;padding:0 22px;font-size:16px}
 @media (max-width:640px){.nav .opt{display:none}}
 
@@ -87,12 +86,12 @@ header{position:sticky;top:0;z-index:10;background:linear-gradient(var(--bg) 58%
 .btn .i{width:22px;height:22px;flex:none;fill:currentColor}
 .btn-g{color:var(--ink);--paint:var(--ghost)}
 .btn-g:hover{--paint:var(--ghost-hi)}
-.tg{color:#fff;--paint:var(--tg)}
+.tg{color:var(--on-tg);--paint:var(--tg)}
 .gh{color:var(--on-mono);--paint:var(--mono)}
-.nx{color:#12161e;--paint:var(--nexus)}
+.nx{color:var(--on-nexus);--paint:var(--nexus)}
 .mono{color:var(--on-mono);--paint:var(--mono);padding:0 34px}
 .mono .i{width:118px;height:17px}
-.p24{color:#12161e;--paint:var(--privat)}
+.p24{color:var(--on-privat);--paint:var(--privat)}
 .btns{display:flex;flex-wrap:wrap;gap:14px 12px}
 
 /* перший екран */
@@ -100,15 +99,15 @@ header{position:sticky;top:0;z-index:10;background:linear-gradient(var(--bg) 58%
 @media (max-width:900px){.hero{grid-template-columns:1fr}}
 .hero-art{display:flex;justify-content:center}
 .mark{display:block;width:auto;height:clamp(300px,50vw,540px);max-width:100%;filter:drop-shadow(0 28px 60px rgb(10 132 214 / .22))}
-.mark .stroke{stroke-dasharray:1 1;stroke-dashoffset:1;animation:paint 1.7s cubic-bezier(.55,0,.2,1) .25s forwards}
-@keyframes paint{to{stroke-dashoffset:0}}
 @media (max-width:900px){.hero-art{order:-1}.mark{height:clamp(240px,62vw,380px)}}
 /* «УКРАЇНСЬКОЮ» – 7.3 кегля завширшки: завжди влазить у свою колонку */
 h1{font:800 min(calc((100vw - 2*var(--gut))/7.6),104px)/.95 var(--head);margin:0 0 28px;text-transform:uppercase;letter-spacing:-.015em}
 h1>span{display:block}
+@property --d1{syntax:'<color>';inherits:false;initial-value:transparent}
+@property --d2{syntax:'<color>';inherits:false;initial-value:transparent}
 @media (min-width:901px){h1{font-size:clamp(56px,5.9vw,86px)}}
 /* пасхалка: крапки «Ї» – небо й пшениця */
-.yi{padding:0 .03em;margin:0 -.03em;color:transparent;-webkit-background-clip:text;background-clip:text;background-image:linear-gradient(transparent 18.6%,var(--ink) 18.6%),linear-gradient(90deg,var(--sky) 50%,var(--dot-yellow) 50%)}
+.yi{padding:0 .03em;margin:0 -.03em;color:transparent;-webkit-background-clip:text;background-clip:text;background-image:linear-gradient(transparent 18.6%,var(--ink) 18.6%),linear-gradient(90deg,var(--d1) 50%,var(--d2) 50%);--d1:var(--sky);--d2:var(--dot-yellow)}
 .lead{font-size:clamp(19px,2.3vw,22px);color:var(--soft);max-width:38ch;text-wrap:pretty;margin:0 0 34px}
 
 /* розділи */
@@ -125,8 +124,7 @@ h3{font:800 clamp(26px,3.2vw,32px)/1.08 var(--head);margin:0;text-wrap:balance}
 @media (min-width:760px){.game{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(32px,5vw,64px)}.game:nth-child(even) .shot{order:2}}
 .info{display:flex;flex-direction:column;gap:14px;min-width:0}
 .shot{aspect-ratio:1280/560;overflow:hidden;-webkit-mask:url(assets/brush-block.svg?v=e4f9a97d) center/100% 100% no-repeat;mask:url(assets/brush-block.svg?v=e4f9a97d) center/100% 100% no-repeat}
-.shot img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
-.game:hover .shot img{transform:scale(1.04)}
+.shot img{width:100%;height:100%;object-fit:cover}
 .facts{margin:0;color:var(--ink);font:500 15px/1.4 var(--body)}
 .info p:not(.facts),.plan p{margin:0;color:var(--muted);text-wrap:pretty}
 .info .btns{padding-top:8px}
@@ -138,7 +136,7 @@ h3{font:800 clamp(26px,3.2vw,32px)/1.08 var(--head);margin:0;text-wrap:balance}
 .next{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:48px 56px}
 .plan{display:flex;flex-direction:column;gap:14px}
 .tag{align-self:flex-start;font:500 14px/1 var(--body);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);display:flex;align-items:center;gap:10px}
-.tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--wheat);animation:pulse 2s infinite}
+.tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--wheat)}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgb(245 178 30 / .6)}70%,100%{box-shadow:0 0 0 8px rgb(245 178 30 / 0)}}
 .plan .btns{margin-top:6px}
 
@@ -149,8 +147,7 @@ h3{font:800 clamp(26px,3.2vw,32px)/1.08 var(--head);margin:0;text-wrap:balance}
 .steppe p{margin:0;color:var(--muted);max-width:56ch;text-wrap:pretty}
 
 /* підтримка: мазок, крізь який видно степ, як у знаку */
-.field{height:clamp(130px,22vw,250px);margin:0 0 clamp(32px,5vw,48px);-webkit-mask:url(assets/brush-panel.svg?v=1be01bbf) center/100% 100% no-repeat;mask:url(assets/brush-panel.svg?v=1be01bbf) center/100% 100% no-repeat;clip-path:inset(0 100% 0 0);transition:clip-path 1.4s cubic-bezier(.6,0,.2,1)}
-.field.in{clip-path:inset(0 0 0 0)}
+.field{height:clamp(130px,22vw,250px);margin:0 0 clamp(32px,5vw,48px);-webkit-mask:url(assets/brush-panel.svg?v=1be01bbf) center/100% 100% no-repeat;mask:url(assets/brush-panel.svg?v=1be01bbf) center/100% 100% no-repeat;overflow:hidden}
 .field img{width:100%;height:100%;object-fit:cover;object-position:50% 58%}
 .donate .btn{min-width:min(210px,100%)}
 .note{margin:26px 0 0;color:var(--muted);font-size:16px}
@@ -164,11 +161,58 @@ footer{padding:24px 0 56px;color:var(--muted);font-size:15px}
 .legal{margin:18px 0 0;font-size:14px;color:var(--faint)}
 
 /* поява */
-.rise{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
-.rise.in{opacity:1;transform:none}
-.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);color:var(--bg);font:500 16px/1 var(--body);padding:18px 30px;opacity:0;pointer-events:none;transition:.25s;z-index:20;--paint:var(--ink)}
-.toast.on{opacity:1;transform:translate(-50%,0)}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rise{opacity:1;transform:none}.mark .stroke{stroke-dashoffset:0}.field{clip-path:none}}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,0);color:var(--bg);font:500 16px/1 var(--body);padding:18px 30px;opacity:0;pointer-events:none;transition:.25s;z-index:20;--paint:var(--ink)}
+.toast.on{opacity:1}
+/* рух: лише коли людина не просить менше руху. Без нього все одразу на своєму місці, кольори під курсором лишаються */
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+  /* перший екран: рядки заголовка встають по черзі, крапки «Ї» спалахують небом і жовтим, коли слово вже стоїть */
+  @keyframes up{from{opacity:0;translate:0 .45em}}
+  @keyframes dots{from{--d1:var(--ink);--d2:var(--ink)}}
+  h1>span{animation:up .8s cubic-bezier(.2,.7,.2,1) .15s backwards}
+  h1>span+span{animation-delay:.27s}
+  .yi{animation:dots .5s ease-out 1.25s backwards}
+  .hero .lead{animation:up .8s cubic-bezier(.2,.7,.2,1) .42s backwards}
+  .hero .btns{animation:up .8s cubic-bezier(.2,.7,.2,1) .54s backwards}
+  /* знак: пензель проводить «S»; під курсором знак ледь повертається до нього, клік малює знову */
+  .mark .stroke{stroke-dasharray:1 1;stroke-dashoffset:1;animation:paint 1.7s cubic-bezier(.55,0,.2,1) .25s forwards}
+  @keyframes paint{to{stroke-dashoffset:0}}
+  .mark{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .6s cubic-bezier(.2,.7,.2,1),filter .6s}
+  .hero-art.live{cursor:pointer}
+  .hero-art.live:hover .mark{filter:drop-shadow(0 28px 70px rgb(10 132 214 / .36))}
+  /* блоки з'являються, піднімаючись; підзаголовок – слідом за заголовком */
+  .rise{opacity:0;translate:0 18px;transition:opacity .7s ease,translate .7s cubic-bezier(.2,.7,.2,1)}
+  .rise.in{opacity:1;translate:none}
+  .sub.rise,.plan.rise+.plan.rise{transition-delay:.1s}
+  /* кнопки: мазок під курсором ледь розгортається, знак сервісу підказує дію */
+  .btn:hover::before,.btn:focus-visible::before{transform:scale(1.035,1.07) rotate(-.6deg)}
+  .btn:active::before{transform:scale(.97)}
+  .btn .i{transition:translate .3s cubic-bezier(.3,1.4,.5,1)}
+  .btn:hover .i{translate:var(--nudge,0 0)}
+  .dl{--nudge:0 3px}.tg{--nudge:2px -2px}.share{--nudge:0 -3px}
+  /* картка гри: пензель прокладає арт, курсор зсуває його в мазку, як у вікні */
+  .game .shot{clip-path:inset(0 100% 0 0);transition:clip-path 1.1s cubic-bezier(.6,0,.2,1) .1s}
+  .game:nth-child(even) .shot{clip-path:inset(0 0 0 100%)}
+  .game.in .shot{clip-path:inset(0 0 0 0)}
+  .shot img{transform:translate(var(--px,0px),var(--py,0px)) scale(var(--zoom,1));transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+  .game:hover .shot img{--zoom:1.06}
+  /* стан плану: крапка двічі дихає, коли план з'являється */
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgb(245 178 30 / .6)}70%,100%{box-shadow:0 0 0 8px rgb(245 178 30 / 0)}}
+  .plan.in .tag::before{animation:pulse 2s .5s 2}
+  /* смуга степу: пензель розгортає її, далі степ повільно пливе за прокручуванням */
+  .field{clip-path:inset(0 100% 0 0);transition:clip-path 1.4s cubic-bezier(.6,0,.2,1)}
+  .field.in{clip-path:inset(0 0 0 0)}
+  .toast{translate:0 20px;transition:opacity .25s,translate .25s}
+  .toast.on{translate:none}
+  /* заголовки розділів: вітер над степом у літерах, поки заголовок на екрані */
+  @supports ((animation-timeline:view()) and (animation-range:entry)){
+    h2{view-timeline:--h2}
+    .land{background-size:118% 100%;animation:wind linear both;animation-timeline:--h2}
+    @keyframes wind{from{background-position:0% 50%}to{background-position:100% 50%}}
+    .field img{height:124%;animation:drift linear both;animation-timeline:view();animation-range:cover}
+    @keyframes drift{from{translate:0 -19%}to{translate:0 0}}
+  }
+}
 </style>
 </head>
 <body>
@@ -195,11 +239,11 @@ footer{padding:24px 0 56px;color:var(--muted);font-size:15px}
 <main id="top">
   <div class="wrap hero">
     <div class="hero-text">
-      <h1>Ігри<span>Укра<span class="yi">ї</span>нською</span></h1>
+      <h1><span>Ігри</span><span>Укра<span class="yi">ї</span>нською</span></h1>
       <p class="lead">Повні українські локалізації ігор. Безкоштовно, з встановленням за хвилину.</p>
       <div class="btns">
         <a class="btn" href="#games">Обрати гру</a>
-        <button class="btn btn-g" type="button" data-share>
+        <button class="btn btn-g share" type="button" data-share>
           <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="fill:none"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v14"/></svg>
           Поділитися
         </button>
@@ -343,6 +387,49 @@ footer{padding:24px 0 56px;color:var(--muted);font-size:15px}
     if (navigator.share) { try { await navigator.share(data); } catch (_) {} return; }
     try { await navigator.clipboard.writeText(data.url); say('Посилання скопійовано'); }
     catch (_) { say('stepovyk.github.io'); }
+  });
+
+  // меню: пензель підкреслює розділ, який зараз на екрані
+  const links = new Map([...document.querySelectorAll('.nav a[href^="#"]')].map(a => [a.hash.slice(1), a]));
+  const spy = 'IntersectionObserver' in window && new IntersectionObserver(es => es.forEach(e => {
+    const a = links.get(e.target.id);
+    if (!a) return;
+    a.classList.toggle('on', e.isIntersecting);
+    e.isIntersecting ? a.setAttribute('aria-current', 'location') : a.removeAttribute('aria-current');
+  }), { rootMargin: '-45% 0px -50% 0px' });
+  if (spy) links.forEach((_, id) => { const el = document.getElementById(id); if (el) spy.observe(el); });
+
+  // далі – лише рух під курсором: коли людина не просить менше руху і має мишу
+  if (!matchMedia('(prefers-reduced-motion: no-preference)').matches) return;
+  const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  // знак: клік малює «S» знову; під курсором знак ледь повертається до нього
+  const art = document.querySelector('.hero-art'), mark = art && art.querySelector('.mark');
+  if (mark) {
+    art.classList.add('live');
+    art.addEventListener('click', () => mark.querySelectorAll('.stroke').forEach(p => p.getAnimations().forEach(x => { x.cancel(); x.play(); })));
+    if (fine) {
+      const hero = document.querySelector('.hero');
+      hero.addEventListener('pointermove', e => {
+        const r = mark.getBoundingClientRect();
+        const x = Math.max(-1, Math.min(1, (e.clientX - r.left - r.width / 2) / (r.width * 1.5)));
+        const y = Math.max(-1, Math.min(1, (e.clientY - r.top - r.height / 2) / (r.height * 1.5)));
+        mark.style.setProperty('--ry', (x * 7).toFixed(2) + 'deg');
+        mark.style.setProperty('--rx', (-y * 5).toFixed(2) + 'deg');
+      });
+      hero.addEventListener('pointerleave', () => { mark.style.removeProperty('--rx'); mark.style.removeProperty('--ry'); });
+    }
+  }
+
+  // картки ігор: курсор зсуває арт у мазку, як краєвид за вікном
+  if (fine) document.querySelectorAll('.game .shot').forEach(shot => {
+    const img = shot.querySelector('img');
+    shot.addEventListener('pointermove', e => {
+      const r = shot.getBoundingClientRect();
+      img.style.setProperty('--px', ((0.5 - (e.clientX - r.left) / r.width) * 24).toFixed(1) + 'px');
+      img.style.setProperty('--py', ((0.5 - (e.clientY - r.top) / r.height) * 14).toFixed(1) + 'px');
+    });
+    shot.addEventListener('pointerleave', () => { img.style.removeProperty('--px'); img.style.removeProperty('--py'); });
   });
 })();
 </script>
