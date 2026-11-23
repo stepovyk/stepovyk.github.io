@@ -116,7 +116,7 @@ section{padding:clamp(48px,7vw,88px) 0 0}
 .hero .lead{margin-bottom:32px}
 .banner{margin-top:clamp(32px,5vw,56px)}
 .banner img{width:100%;aspect-ratio:5/2;object-fit:cover;border-radius:var(--r-card);background:var(--fill)}
-@media (max-width:640px){.banner img{aspect-ratio:2/1}}
+@media (max-width:640px){.banner img{aspect-ratio:3/2}}
 @property --d1{syntax:'<color>';inherits:false;initial-value:transparent}
 @property --d2{syntax:'<color>';inherits:false;initial-value:transparent}
 .yi{padding:0 .03em;margin:0 -.03em;color:transparent;-webkit-background-clip:text;background-clip:text;background-image:linear-gradient(transparent 21%,var(--ink) 21%),linear-gradient(90deg,var(--d1) 50%,var(--d2) 50%);--d1:var(--sky);--d2:var(--dot-yellow)}
